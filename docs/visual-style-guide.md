@@ -40,6 +40,7 @@ The visual language aims to communicate clearly the purpose of the website and e
 
 ## Color Palette
 The chosen color palette seeks to communicate reliability, creativity and have sufficient contrast ratio to meet the accessibility requirements.
+![Color Palette](assets/color-scheme.png)
 
 ## Typography
 The chosen fonts seek to be modern and reflect the brand identity, while also supporting both latin and cyrillic character set in order to adhere to the course requirements.
