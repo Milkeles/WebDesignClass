@@ -45,6 +45,12 @@ The chosen color palette seeks to communicate reliability, creativity and have s
 ## Typography
 The chosen fonts seek to be modern and reflect the brand identity, while also supporting both latin and cyrillic character set in order to adhere to the course requirements.
 
+- Titles - Montserrat Alternates
+- Headings - Ubuntu
+- Normal Text - Exo 2
+
+All three fonts are modern looking and geometric, creating a feel of creativity and 
+![Material Sample](assets/material-sample.png)
 ## Components and Styling
 
 ## Accessibility
