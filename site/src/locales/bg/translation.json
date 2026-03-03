@@ -1,0 +1,26 @@
+{
+  "nav": {
+
+  },
+
+  "home": {
+    "hero": {
+      "title": "Добре дошли!",
+      "description": "Това е сайт за нещо си!",
+      "primary-cta": "Контакти",
+      "secondary-cta": "Назад"
+    }
+  },
+
+  "about": {
+
+  },
+
+  "services": {
+
+  },
+
+  "contact": {
+
+  }
+}

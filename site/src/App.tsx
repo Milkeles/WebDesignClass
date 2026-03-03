@@ -1,4 +1,15 @@
 import { useState, useEffect } from 'react'
+import { Button } from "@/components/ui/button"
+import { useTranslation } from 'react-i18next'
+import { ArrowRight, Moon, Sun } from 'lucide-react'
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 
 function App() {
   const [dark, setDark] = useState(true)
@@ -12,6 +23,7 @@ function App() {
     const t = setTimeout(() => setVisible(true), 100)
     return () => clearTimeout(t)
   }, [])
+  const { t, i18n } = useTranslation()
 
   return (
     <div className={`min-h-screen bg-background text-foreground font-sans transition-colors duration-500`}>
@@ -22,24 +34,35 @@ function App() {
           Hristo's site
         </span>
 
+
         <button
           onClick={() => setDark(!dark)}
           className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground transition-all duration-200"
           aria-label="Toggle dark mode"
         >
           {dark ? (
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-            </svg>
+            <Sun size={14} strokeWidth={2.5} />
           ) : (
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
+            <Moon size={14} strokeWidth={2.5} />
           )}
         </button>
+
+        <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <button className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground transition-all duration-200">
+            <span className={`fi fi-${i18n.language === 'bg' ? 'bg' : 'gb'}`} />
+          </button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem onClick={() => i18n.changeLanguage('en')}>
+            <span className="fi fi-gb mr-2" /> English
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => i18n.changeLanguage('bg')}>
+            <span className="fi fi-bg mr-2" /> Български
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+      
       </nav>
 
       {/* HERO */}
@@ -68,34 +91,32 @@ function App() {
             className="text-[clamp(3rem,9vw,8rem)] font-black leading-[0.95] tracking-tight mb-10"
             style={{ fontFamily: "'Arial', sans-serif" }}
           >
-            Hello world!
+            {t('home.hero.title')}
           </h1>
 
           <p
             className="text-lg md:text-xl text-muted-foreground max-w-xl mb-12 leading-relaxed transition-all duration-700 delay-100"
             style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(16px)', fontFamily: "'Exo 2', sans-serif" }}
           >
-            A website for Web Design Class made with Vite, shadcn, tailwind, and typescript.
+            {t('home.hero.description')}
           </p>
 
           <div
             className="flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-200"
             style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(16px)' }}
           >
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-bold tracking-wide text-sm uppercase rounded-sm hover:opacity-90 transition-opacity"
-            >
-              Primary CTA
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-              </svg>
+
+          <Button variant="default" className = "w-36" asChild>
+            <a href="#contact">
+              {t('home.hero.primary-cta')}
+              <ArrowRight size={14} strokeWidth={2.5} />
             </a>
-            <a href="#hero"
-              className="inline-flex items-center justify-center px-8 py-4 border border-border text-foreground font-bold tracking-wide text-sm uppercase rounded-sm hover:bg-muted transition-colors"
-            >
-              Secondary CTA
-            </a>
+          </Button>
+
+          <Button variant="outline" className = "w-36" asChild>
+            <a href="#hero"> {t('home.hero.secondary-cta')} </a>
+          </Button>
+
           </div>
         </div>
 

@@ -12,10 +12,14 @@
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "flag-icons": "^7.5.0",
+    "i18next": "^25.8.13",
     "lucide-react": "^0.575.0",
     "radix-ui": "^1.4.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-i18next": "^16.5.4",
+    "react-router-dom": "^7.13.1",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {

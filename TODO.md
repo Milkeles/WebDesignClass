@@ -15,7 +15,7 @@ Finished: 03/03/2026
 - [ ] Buttons and other key components
 - [ ] Navigation bar component
 - [ ] Assemble Landing/Home page
-- [ ] Implement language switching
+- [x] Implement language switching
 - [ ] Logo and text
 
 Started: 03/03/2026
