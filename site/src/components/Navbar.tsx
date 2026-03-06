@@ -8,11 +8,7 @@ import {
 } from '@/components/ui/DropdownMenu'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
-
-interface NavbarProps {
-  dark: boolean
-  onToggleDark: () => void
-}
+import { useTheme } from '@/context/theme-context'
 
 const navLinks = [
   { label: 'nav.home', href: '/' },
@@ -22,8 +18,9 @@ const navLinks = [
   { label: 'nav.contact', href: '/contact' },
 ]
 
-export function Navbar({ dark, onToggleDark }: NavbarProps) {
+export function Navbar() {
   const { t, i18n } = useTranslation()
+  const { dark, toggleDark } = useTheme()
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 backdrop-blur-md bg-background/80 border-b border-border">
@@ -42,7 +39,7 @@ export function Navbar({ dark, onToggleDark }: NavbarProps) {
 
       <div className="flex items-center gap-2">
         <Button
-          onClick={onToggleDark}
+          onClick={toggleDark}
           variant="icon"
           size="icon"
           aria-label="Toggle dark mode"

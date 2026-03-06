@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/react-vite'
 import React from 'react'
+import { MemoryRouter } from 'react-router-dom'
+import { ThemeContext } from '../src/context/theme-context'
 import '../src/i18n'
 import '../src/index.css'
 import 'flag-icons/css/flag-icons.min.css'
@@ -18,9 +20,15 @@ const preview: Preview = {
   },
   decorators: [
     (Story, context) => {
-      const theme = context.globals.theme
-      document.documentElement.classList.toggle('dark', theme === 'dark')
-      return React.createElement(Story)
+      const dark = context.globals.theme === 'dark'
+      document.documentElement.classList.toggle('dark', dark)
+      return React.createElement(
+        ThemeContext.Provider,
+        { value: { dark, toggleDark: () => {} } },
+        React.createElement(MemoryRouter, null,
+          React.createElement(Story)
+        )
+      )
     },
   ],
   parameters: {

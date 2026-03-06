@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/Button"
 import { useTranslation } from 'react-i18next'
 import { ArrowRight } from 'lucide-react'
 import { Navbar } from "@/components/Navbar"
+import { useTheme } from '@/context/theme-context'
+
 
 function App() {
-  const [dark, setDark] = useState(true)
+  const { dark } = useTheme()
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -16,13 +18,12 @@ function App() {
     const t = setTimeout(() => setVisible(true), 100)
     return () => clearTimeout(t)
   }, [])
-  const { t, i18n } = useTranslation()
+  const { t /*, i18n */ } = useTranslation()
 
   return (
-    <div className={`min-h-screen bg-background text-foreground font-sans transition-colors duration-500`}>
+    <div className={`min-h-screen bg-background text-foreground font-sans transition-colors duration-200`}>
 
-      {/* NAV */}
-      <Navbar dark={dark} onToggleDark={() => setDark(!dark)} />
+      <Navbar />
 
       {/* HERO */}
       <section id="hero" className="min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-24 pb-16 relative overflow-hidden">
@@ -65,48 +66,48 @@ function App() {
             style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(16px)' }}
           >
 
-          <Button variant="default" className = "w-36" asChild>
-            <a href="#contact">
-              {t('home.hero.primary-cta')}
-              <ArrowRight size={14} strokeWidth={2.5} />
-            </a>
-          </Button>
+            <Button variant="default" effect="shineHover" className="w-36" asChild>
+              <a href="#contact">
+                {t('home.hero.primary-cta')}
+                <ArrowRight size={14} strokeWidth={2.5} />
+              </a>
+            </Button>
 
-          <Button variant="secondary" className = "w-36" asChild>
-            <a href="#hero"> {t('home.hero.secondary-cta')} </a>
-          </Button>
+            <Button variant="secondary" className="w-36" asChild>
+              <a href="#hero"> {t('home.hero.secondary-cta')} </a>
+            </Button>
 
           </div>
         </div>
 
         {/* Stat bar */}
-<div
-  className="relative mt-24 overflow-hidden transition-all duration-700 delay-300"
-  style={{ opacity: visible ? 1 : 0 }}
->
-  {/* Header for metrics - now inside the container, above the grid */}
-  <div className=" px-6 py-4">
-    <p
-      className="text-lg md:text-xl text-muted-foreground leading-relaxed"
-      style={{ fontFamily: "'Exo 2', sans-serif" }}
-    >
-      Some metrics:
-    </p>
-  </div>
-  
-  <div className="grid grid-cols-3 gap-px bg-border max-w-2xl border border-border rounded-sm">
-    {[
-      { value: '< 1s', label: 'Load time' },
-      { value: '98+', label: 'Lighthouse score' },
-      { value: '3×', label: 'Avg. conversion lift' },
-    ].map(({ value, label }) => (
-      <div key={label} className="flex flex-col items-center justify-center py-6 bg-background text-center px-4">
-        <span className="text-2xl font-black tracking-tight" style={{ fontFamily: "'Russo One', 'Arial Black', sans-serif" }}>{value}</span>
-        <span className="text-xs text-muted-foreground mt-1 tracking-wide uppercase">{label}</span>
-      </div>
-    ))}
-  </div>
-</div>
+        <div
+          className="relative mt-24 overflow-hidden transition-all duration-700 delay-300"
+          style={{ opacity: visible ? 1 : 0 }}
+        >
+          {/* Header for metrics - now inside the container, above the grid */}
+          <div className=" px-6 py-4">
+            <p
+              className="text-lg md:text-xl text-muted-foreground leading-relaxed"
+              style={{ fontFamily: "'Exo 2', sans-serif" }}
+            >
+              Some metrics:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-px bg-border max-w-2xl border border-border rounded-sm">
+            {[
+              { value: '< 1s', label: 'Load time' },
+              { value: '98+', label: 'Lighthouse score' },
+              { value: '3×', label: 'Avg. conversion lift' },
+            ].map(({ value, label }) => (
+              <div key={label} className="flex flex-col items-center justify-center py-6 bg-background text-center px-4">
+                <span className="text-2xl font-black tracking-tight" style={{ fontFamily: "'Russo One', 'Arial Black', sans-serif" }}>{value}</span>
+                <span className="text-xs text-muted-foreground mt-1 tracking-wide uppercase">{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* CONTACT */}
