@@ -48,15 +48,14 @@ function App() {
           </p>
 
           <h1
-            className="text-[clamp(3rem,9vw,8rem)] font-black leading-[0.95] tracking-tight mb-10"
-            style={{ fontFamily: "'Arial', sans-serif" }}
+            className="text-[clamp(3rem,9vw,8rem)] leading-[0.95] tracking-tight mb-10"
           >
             {t('home.hero.title')}
           </h1>
 
           <p
             className="text-lg md:text-xl text-muted-foreground max-w-xl mb-12 leading-relaxed transition-all duration-700 delay-100"
-            style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(16px)', fontFamily: "'Exo 2', sans-serif" }}
+            style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(16px)' }}
           >
             {t('home.hero.description')}
           </p>
@@ -89,7 +88,6 @@ function App() {
           <div className=" px-6 py-4">
             <p
               className="text-lg md:text-xl text-muted-foreground leading-relaxed"
-              style={{ fontFamily: "'Exo 2', sans-serif" }}
             >
               Some metrics:
             </p>
@@ -102,7 +100,7 @@ function App() {
               { value: '3×', label: 'Avg. conversion lift' },
             ].map(({ value, label }) => (
               <div key={label} className="flex flex-col items-center justify-center py-6 bg-background text-center px-4">
-                <span className="text-2xl font-black tracking-tight" style={{ fontFamily: "'Russo One', 'Arial Black', sans-serif" }}>{value}</span>
+                <span className="text-2xl font-black tracking-tight">{value}</span>
                 <span className="text-xs text-muted-foreground mt-1 tracking-wide uppercase">{label}</span>
               </div>
             ))}
@@ -116,11 +114,10 @@ function App() {
           <p className="text-xs font-bold tracking-[0.4em] uppercase text-muted-foreground mb-6">Contact</p>
           <h2
             className="text-4xl md:text-6xl font-black tracking-tight mb-6"
-            style={{ fontFamily: "'Russo One', 'Arial Black', sans-serif" }}
           >
             I don't know
           </h2>
-          <p className="text-muted-foreground mb-12 text-lg" style={{ fontFamily: "'Exo 2', sans-serif" }}>
+          <p className="text-muted-foreground mb-12 text-lg">
             I answer within 10 business years. I promise.
           </p>
 

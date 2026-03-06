@@ -3,11 +3,14 @@
     "language-select": "Select language",
     "switch-to-en": "Switch to English",
     "switch-to-bg": "Switch to Bulgarian",
+    "dark-mode": "Toggle dark mode",
     "home": "Home",
     "about": "About us",
     "services": "Services",
     "work": "Work",
-    "contact": "Contact"
+    "contact": "Contact",
+    "close-menu": "Close the navigation menu",
+    "open-menu": "Open the navigation menu"
   },
   "home": {
     "hero": {

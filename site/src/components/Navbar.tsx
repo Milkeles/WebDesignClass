@@ -35,14 +35,14 @@ export function Navbar() {
         {/* Desktop nav links */}
         <div className="hidden md:flex items-center gap-1">
           {navLinks.map(({ label, href }) => (
-            <Button key={href} variant="navigation" asChild>
+            <Button key={href} variant="navigation" effect="hoverUnderline" asChild>
               <NavLink to={href}>{t(label)}</NavLink>
             </Button>
           ))}
         </div>
 
         <div className="flex items-center gap-2">
-          <Button onClick={toggleDark} variant="icon" size="icon" aria-label="Toggle dark mode">
+          <Button onClick={toggleDark} variant="icon" size="icon" aria-label={t('nav.dark-mode')}>
             {dark ? <Sun size={14} strokeWidth={2.5} /> : <Moon size={14} strokeWidth={2.5} />}
           </Button>
 
@@ -66,7 +66,7 @@ export function Navbar() {
           <Button
             variant="icon"
             size="icon"
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-label={mobileOpen ? t('nav.close-menu') : t('nav.open-menu') }
             className="md:hidden"
             onClick={() => setMobileOpen(o => !o)}
           >
@@ -87,6 +87,7 @@ export function Navbar() {
             variant="navigation"
             asChild
             className="justify-start w-full"
+            effect="hoverUnderline"
             onClick={() => setMobileOpen(false)}
           >
             <NavLink to={href}>{t(label)}</NavLink>
@@ -97,7 +98,7 @@ export function Navbar() {
       {/* Backdrop */}
       {mobileOpen && (
         <button
-          aria-label="Close menu"
+          aria-label={t('nav.close-menu')}
           className="fixed inset-0 z-30 w-full h-full bg-black/40 md:hidden backdrop-blur-sm cursor-default"
           onClick={() => setMobileOpen(false)}
         />
