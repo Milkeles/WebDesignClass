@@ -60,6 +60,9 @@ The Fervor Web website is built as a modern multi-page application, leveraging a
 - **shadcn/ui** - Component library built on top of Radix UI primitives, used for interactive UI elements such as dialogs, dropdowns, and form controls. Components are unstyled by default and customized via Tailwind to conform to the VSG.
 - **HTML5** - Semantic HTML5 markup is used throughout, supporting both accessibility requirements and SEO optimization.
 
+### Component Development and Testing
+- **Storybook** - Used to build, test, and visually validate UI components in isolation.
+
 ### Documentation and Wiki
 - **Jekyll (GitHub Pages)** - A static site generator used to host the project wiki. It is deployed separately via GitHub Pages and is not part of the root application. Jekyll's Markdown-based authoring and GitHub-native integration make it well-suited for maintaining living documentation alongside the codebase.
 

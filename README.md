@@ -42,12 +42,16 @@ npm install
 
 # Start the development server
 npm run dev
+
+# Start Storybook (component documentation)
+npm run storybook
 ```
 
 ## Documentation References
 - [Visual Style Guide](docs/visual-style-guide.md)
 - [Technical Design Document](docs/technical-design.md)
 - [Configuration Management Plan](docs/configuration-management.md)
+- Component Library (Storybook) – run locally with `npm run storybook`
 
 *Note: Some documents typically found in a full-stack project are intentionally excluded due to the frontend-focused nature of the project, while others not usually versioned in a repository are included for class purposes.*
 

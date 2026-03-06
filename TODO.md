@@ -9,31 +9,38 @@
 - [x] Create TODO and CHANGELOG
 
 Started: 23/01/2026
+
 Finished: 03/03/2026
 
 ### M2 - Landing Page
-- [ ] Buttons and other key components
-- [ ] Navigation bar component
+- [x] Setup Storybook
+- [x] Buttons and other key components
+- [x] Navigation bar component
 - [ ] Assemble Landing/Home page
-- [ ] Implement language switching
+- [x] Implement language switching
 - [ ] Logo and text
 
 Started: 03/03/2026
+
 Finished: -
 
-### M3 - 
+### M3 - Pages
 - [ ] About Page
 - [ ] Services and Pricing Page
 - [ ] Previous Work / Clients page
 - [ ] Contact Page
 
 Started: -
+
 Finished: - 
 
 ### M4 - Polishing
 - [ ] Double-check translation and animations.
 - [ ] Test (and fix) bugs.
 - [ ] Deploy Initial Release.
+- [ ] Theme and language cookies
+- [ ] Cookie Consent Component
 
 Started: -
+
 Finished: -

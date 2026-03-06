@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "language-select": "Избери език",
+    "switch-to-en": "Превключи на английски",
+    "switch-to-bg": "Превключи на български",
+    "home": "Начало",
+    "about": "За нас",
+    "services": "Услуги",
+    "work": "Портфолио",
+    "contact": "Контакт"
+  },
+  "home": {
+    "hero": {
+      "title": "Добре дошли!",
+      "description": "Това е сайт за нещо си!",
+      "primary-cta": "Контакти",
+      "secondary-cta": "Назад"
+    }
+  },
+
+  "about": {
+
+  },
+
+  "services": {
+
+  },
+
+  "contact": {
+
+  }
+}

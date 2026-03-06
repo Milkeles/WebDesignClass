@@ -31,7 +31,9 @@ The practices outlined in this document apply to the full development lifecycle 
 
 ## Development Strategy
 ### Methodology
-Due to the single-developer nature of this project, no formal development methodology (such as Scrum or Kanban) is applied. Development is carried out iteratively, with features implemented and refined incrementally as the project progresses.
+Due to the single-developer nature of this project, no formal team development methodology (such as Scrum or Kanban) is applied.
+The Development is component-driven and carried out iteratively, with components and features implemented and refined incrementally as the project progresses.
+Components are first implemented and verified in isolation via Storybook before being composed into application pages.
 
 ### Branching Strategy
 The project follows a trunk-based development approach. The ``main`` branch serves as the single source of truth and should always remain in a stable, deployable state. Development work is carried out on short-lived branches that are merged back into ``main`` promptly upon completion.
@@ -49,7 +51,7 @@ Branch names follow the convention ``type/short-description``, where type is one
 - Constants - SCREAMING_SNAKE_CASE (e.g. MAX_RETRIES)
 - CSS classes - Tailwind utility classes only; no custom class names unless strictly necessary
 #### File and Folder Naming
-All files and folders use **kebab-case**, with the exception of component files which use PascalCase to match their exported component name.
+All files and folders use **kebab-case**, with the exception of component files and pages which use PascalCase to match their exported component name.
 Folders group files by type (e.g. components/, pages/), consistent with the project structure defined in the Technical Design Document.
 #### Comment Style
 - Comments should explain why, not what - the code itself should be self-explanatory.
@@ -84,6 +86,7 @@ All changes are tracked through Git commit history on GitHub. Each merge into ``
 - Vite - Development server and production build
 - npm - Dependency management
 - Jekyll - Project wiki, hosted via GitHub Pages
+- Storybook - Used for isolated component development and visual validation.
 
 ### Permissions
 The repository is publicly accessible on GitHub and open source, as is the GitHub Pages wiki.
