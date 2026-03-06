@@ -14,8 +14,8 @@ Finished: 03/03/2026
 
 ### M2 - Landing Page
 - [x] Setup Storybook
-- [ ] Buttons and other key components
-- [ ] Navigation bar component
+- [x] Buttons and other key components
+- [x] Navigation bar component
 - [ ] Assemble Landing/Home page
 - [x] Implement language switching
 - [ ] Logo and text

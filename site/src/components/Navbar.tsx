@@ -1,12 +1,13 @@
 import { Sun, Moon } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/Button'
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from '@/components/ui/dropdown-menu'
+} from '@/components/ui/DropdownMenu'
 import { useTranslation } from 'react-i18next'
+import { NavLink } from 'react-router-dom'
 
 interface NavbarProps {
   dark: boolean
@@ -34,7 +35,7 @@ export function Navbar({ dark, onToggleDark }: NavbarProps) {
       <div className="flex items-center gap-1">
         {navLinks.map(({ label, href }) => (
           <Button key={href} variant="navigation" effect="hoverUnderline" asChild>
-            <a href={href}>{t(label)}</a>
+            <NavLink to={href}>{t(label)}</NavLink>
           </Button>
         ))}
       </div>

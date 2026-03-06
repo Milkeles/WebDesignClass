@@ -1,16 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/Button"
 import { useTranslation } from 'react-i18next'
-import { ArrowRight, Moon, Sun } from 'lucide-react'
-import { Navbar } from "@/components/navbar"
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
+import { ArrowRight } from 'lucide-react'
+import { Navbar } from "@/components/Navbar"
 
 function App() {
   const [dark, setDark] = useState(true)

@@ -29,7 +29,9 @@ const buttonVariants = cva(
         shineHover:
           "relative before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:transition-[background-position] hover:before:bg-[position:-100%_0,0_0] before:duration-1000",
 
-        // Works only with buttons that have an underline!
+        /**
+         * Works only with buttons that have an underline!
+         */
         hoverUnderline:
           "relative !no-underline after:absolute after:bg-primary after:bottom-2 after:h-[2px] after:w-2/3 after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300",
       },

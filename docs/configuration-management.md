@@ -51,7 +51,7 @@ Branch names follow the convention ``type/short-description``, where type is one
 - Constants - SCREAMING_SNAKE_CASE (e.g. MAX_RETRIES)
 - CSS classes - Tailwind utility classes only; no custom class names unless strictly necessary
 #### File and Folder Naming
-All files and folders use **kebab-case**, with the exception of component files which use PascalCase to match their exported component name.
+All files and folders use **kebab-case**, with the exception of component files and pages which use PascalCase to match their exported component name.
 Folders group files by type (e.g. components/, pages/), consistent with the project structure defined in the Technical Design Document.
 #### Comment Style
 - Comments should explain why, not what - the code itself should be self-explanatory.
