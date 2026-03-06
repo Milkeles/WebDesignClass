@@ -9,17 +9,31 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground font-bold hover:brightness-90",
+        default:
+          "bg-primary text-primary-foreground font-bold hover:brightness-90 active:scale-95 active:brightness-85 focus-visible:ring-2 focus-visible:ring-primary",
         destructive:
-          "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:bg-destructive/60 dark:focus-visible:ring-destructive/40 hover:brightness-90",
+          "bg-destructive text-white dark:bg-destructive/60 hover:brightness-90 active:scale-95 active:brightness-85 focus-visible:ring-2 focus-visible:ring-destructive",
         secondary:
-          "border border-border bg-background text-foreground hover:bg-muted",
+          "border border-border bg-background text-foreground hover:bg-muted active:scale-95 active:brightness-85 focus-visible:ring-2 focus-visible:ring-ring",
         ghost:
-          "hover:bg-accent hover:text-foreground dark:hover:bg-accent/50",
-        link: "text-accent underline-offset-4 underline hover:brightness-90",
-        icon: "rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground transition-all duration-200"
+          "hover:bg-accent hover:text-foreground dark:hover:bg-accent/50 active:scale-95 active:brightness-85 focus-visible:ring-2 focus-visible:ring-ring",
+        link:
+          "text-accent underline-offset-4 underline hover:brightness-90 active:brightness-60",
+        navigation:
+          "text-foreground font-bold uppercase hover:text-foreground/80 active:text-foreground/70",
+        icon:
+          "rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground transition-all active:scale-95 active:brightness-85 focus-visible:ring-2 focus-visible:ring-ring",
       },
-      
+
+      effect: {
+        shineHover:
+          "relative before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:transition-[background-position] hover:before:bg-[position:-100%_0,0_0] before:duration-1000",
+
+        // Works only with buttons that have an underline!
+        hoverUnderline:
+          "relative !no-underline after:absolute after:bg-primary after:bottom-2 after:h-[2px] after:w-2/3 after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300",
+      },
+
       size: {
         default: "h-10 px-6 py-3 has-[>svg]:px-3",
         xs: "h-6 gap-1 rounded-md px-2 text-xs has-[>svg]:px-1.5 [&_svg:not([class*='size-'])]:size-3",
@@ -42,6 +56,7 @@ function Button({
   className,
   variant = "default",
   size = "default",
+  effect,
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
@@ -55,7 +70,7 @@ function Button({
       data-slot="button"
       data-variant={variant}
       data-size={size}
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, effect, className }))}
       {...props}
     />
   )

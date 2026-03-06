@@ -4,6 +4,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --animate-shine: shine 3s ease-out infinite;
+
+  @keyframes shine {
+    0%   { background-position: 200% 0; }
+    25%  { background-position: -200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}
+
 @theme inline {
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);

@@ -1,5 +1,8 @@
 import type { Preview } from '@storybook/react-vite'
 import React from 'react'
+import '../src/i18n'
+import '../src/index.css'
+import 'flag-icons/css/flag-icons.min.css'
 
 const preview: Preview = {
   globalTypes: {

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { useTranslation } from 'react-i18next'
 import { ArrowRight, Moon, Sun } from 'lucide-react'
+import { Navbar } from "@/components/navbar"
 
 import {
   DropdownMenu,
@@ -29,37 +30,7 @@ function App() {
     <div className={`min-h-screen bg-background text-foreground font-sans transition-colors duration-500`}>
 
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 backdrop-blur-md bg-background/80 border-b border-border">
-        <span className="text-sm font-bold tracking-[0.3em] uppercase text-primary">
-          Hristo's site
-        </span>
-
-
-        <Button onClick={() => setDark(!dark)} variant = "icon" size = "icon" aria-label="Toggle dark mode">
-          {dark ? (
-            <Sun size={14} strokeWidth={2.5} />
-          ) : (
-            <Moon size={14} strokeWidth={2.5} />
-          )}
-        </Button>
-
-        <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant = "icon" size = "icon" aria-label={t('nav.language-select')}>
-            <span className={`fi fi-${i18n.language === 'bg' ? 'bg' : 'gb'}`} />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuItem onClick={() => i18n.changeLanguage('en')} aria-label={t('nav.switch-to-en')} lang="en">
-            <span className="fi fi-gb mr-2" /> English
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => i18n.changeLanguage('bg')} aria-label={t('nav.switch-to-bg')} lang="bg">
-            <span className="fi fi-bg mr-2" /> Български
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-      
-      </nav>
+      <Navbar dark={dark} onToggleDark={() => setDark(!dark)} />
 
       {/* HERO */}
       <section id="hero" className="min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-24 pb-16 relative overflow-hidden">

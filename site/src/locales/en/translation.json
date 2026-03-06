@@ -2,7 +2,12 @@
   "nav": {
     "language-select": "Select language",
     "switch-to-en": "Switch to English",
-    "switch-to-bg": "Switch to Bulgarian"
+    "switch-to-bg": "Switch to Bulgarian",
+    "home": "Home",
+    "about": "About us",
+    "services": "Services",
+    "work": "Work",
+    "contact": "Contact"
   },
   "home": {
     "hero": {
