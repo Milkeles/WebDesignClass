@@ -5,15 +5,15 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ===== Montserrat Alternates ===== */
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: 'Montserrat Alternates';
   font-style: normal;
   font-weight: 400;
   src: local('Montserrat Alternates'),
     url('./assets/fonts/montserrat-alternates-v18-cyrillic_cyrillic-ext_latin_latin-ext_vietnamese-regular.woff2') format('woff2');
-}
-@font-face {
+} */
+/* @font-face {
   font-display: swap;
   font-family: 'Montserrat Alternates';
   font-style: normal;
@@ -28,7 +28,7 @@
   font-weight: 700;
   src: local('Montserrat Alternates'),
     url('./assets/fonts/montserrat-alternates-v18-cyrillic_cyrillic-ext_latin_latin-ext_vietnamese-700italic.woff2') format('woff2');
-}
+} */
 @font-face {
   font-display: swap;
   font-family: 'Montserrat Alternates';
@@ -47,14 +47,14 @@
 }
 
 /* ===== Ubuntu ===== */
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
   src: local('Ubuntu'),
     url('./assets/fonts/ubuntu-v21-cyrillic_cyrillic-ext_latin_latin-ext-regular.woff2') format('woff2');
-}
+} */
 @font-face {
   font-display: swap;
   font-family: 'Ubuntu';
@@ -63,7 +63,7 @@
   src: local('Ubuntu'),
     url('./assets/fonts/ubuntu-v21-cyrillic_cyrillic-ext_latin_latin-ext-500.woff2') format('woff2');
 }
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: 'Ubuntu';
   font-style: italic;
@@ -86,7 +86,7 @@
   font-weight: 700;
   src: local('Ubuntu'),
     url('./assets/fonts/ubuntu-v21-cyrillic_cyrillic-ext_latin_latin-ext-700italic.woff2') format('woff2');
-}
+} */
 
 /* ===== Exo 2 ===== */
 @font-face {
@@ -97,14 +97,14 @@
   src: local('Exo 2'),
     url('./assets/fonts/exo-2-v26-cyrillic_cyrillic-ext_latin_latin-ext_vietnamese-regular.woff2') format('woff2');
 }
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: 'Exo 2';
   font-style: italic;
   font-weight: 400;
   src: local('Exo 2'),
     url('./assets/fonts/exo-2-v26-cyrillic_cyrillic-ext_latin_latin-ext_vietnamese-italic.woff2') format('woff2');
-}
+} */
 @font-face {
   font-display: swap;
   font-family: 'Exo 2';
@@ -113,14 +113,14 @@
   src: local('Exo 2'),
     url('./assets/fonts/exo-2-v26-cyrillic_cyrillic-ext_latin_latin-ext_vietnamese-600.woff2') format('woff2');
 }
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: 'Exo 2';
   font-style: italic;
   font-weight: 600;
   src: local('Exo 2'),
     url('./assets/fonts/exo-2-v26-cyrillic_cyrillic-ext_latin_latin-ext_vietnamese-600italic.woff2') format('woff2');
-}
+} */
 
 @theme {
   --font-title: 'Montserrat Alternates', sans-serif;
@@ -280,4 +280,26 @@
     font-family: var(--font-heading);
     font-weight: 500;
   }
+}
+
+.fi {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.333333em;
+  line-height: 1em;
+}
+
+.fi:before {
+  content: '\00a0';
+}
+
+.fi-gb {
+  background-image: url('flag-icons/flags/4x3/gb.svg');
+}
+
+.fi-bg {
+  background-image: url('flag-icons/flags/4x3/bg.svg');
 }

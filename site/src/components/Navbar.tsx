@@ -27,7 +27,8 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-3 backdrop-blur-md bg-background/80 border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-3 
+                      bg-background/90 border-b border-border md:backdrop-blur-md md:bg-background/80">
 
         <Logo />
 
@@ -77,7 +78,7 @@ export function Navbar() {
 
       {/* Mobile drawer */}
       <div
-        className={`fixed top-0 right-0 z-40 h-full w-64 bg-background border-l border-border flex flex-col pt-24 px-6 gap-2 transition-transform duration-300 ease-in-out md:hidden ${mobileOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 right-0 z-40 h-full w-64 bg-background border-l border-border flex flex-col pt-24 px-6 gap-2 transition-transform duration-300 ease-in-out md:hidden ${mobileOpen ? 'translate-x-0' : 'translate-x-full invisible'
           }`}
       >
         {navLinks.map(({ label, href }) => (
@@ -98,7 +99,7 @@ export function Navbar() {
       {mobileOpen && (
         <button
           aria-label={t('nav.close-menu')}
-          className="fixed inset-0 z-30 w-full h-full bg-black/40 md:hidden backdrop-blur-sm cursor-default"
+          className="fixed inset-0 z-30 w-full h-full bg-black/40 md:hidden cursor-default"
           onClick={() => setMobileOpen(false)}
         />
       )}

@@ -6,7 +6,6 @@ import { ThemeContext } from './context/theme-context.tsx'
 import './index.css'
 import App from './App.tsx'
 import './i18n'
-import 'flag-icons/css/flag-icons.min.css'
 
 const About = lazy(() => import('./pages/About'))
 const Services = lazy(() => import("./pages/Services.tsx"))

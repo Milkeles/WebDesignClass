@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { Button } from "@/components/ui/Button"
 import { useTranslation } from 'react-i18next'
 import { ArrowRight } from 'lucide-react'
@@ -9,20 +9,15 @@ import { Footer } from './components/Footer'
 
 function App() {
   const { dark } = useTheme()
-  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
   }, [dark])
 
-  useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 100)
-    return () => clearTimeout(t)
-  }, [])
   const { t /*, i18n */ } = useTranslation()
 
   return (
-    <div className={`min-h-screen bg-background text-foreground font-sans transition-colors duration-200`}>
+    <div className={`min-h-screen bg-background text-foreground font-sans transition-colors overflow-x-hidden duration-200`}>
 
       <Navbar />
 
@@ -42,7 +37,6 @@ function App() {
 
         <div
           className="relative max-w-5xl transition-all duration-700"
-          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(24px)' }}
         >
           <p className="text-xs font-bold tracking-[0.4em] uppercase text-muted-foreground mb-8">
             Performance . Conversion . Speed
@@ -56,14 +50,12 @@ function App() {
 
           <p
             className="text-lg md:text-xl text-muted-foreground max-w-xl mb-12 leading-relaxed transition-all duration-700 delay-100"
-            style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(16px)' }}
           >
             {t('home.hero.description')}
           </p>
 
           <div
             className="flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-200"
-            style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(16px)' }}
           >
 
             <Button variant="default" effect="shineHover" className="w-36" asChild>
@@ -83,7 +75,6 @@ function App() {
         {/* Stat bar */}
         <div
           className="relative mt-24 overflow-hidden transition-all duration-700 delay-300"
-          style={{ opacity: visible ? 1 : 0 }}
         >
           {/* Header for metrics - now inside the container, above the grid */}
           <div className=" px-6 py-4">
