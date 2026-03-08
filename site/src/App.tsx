@@ -6,7 +6,7 @@ import { Navbar } from "@/components/Navbar"
 import { useTheme } from '@/context/theme-context'
 import { Footer } from './components/Footer'
 import { CardGrid } from './components/CardGrid';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardAction } from "@/components/ui/Card";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/Card";
 import ConsultationIcon from '@/assets/icons/consultation.svg?react'
 import AuditIcon from "@/assets/icons/audit.svg?react"
 import DevelopmentIcon from "@/assets/icons/development.svg?react"
