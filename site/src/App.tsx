@@ -1,12 +1,13 @@
 import { useEffect } from 'react'
 import { Button } from "@/components/ui/Button"
 import { useTranslation } from 'react-i18next'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, MessageCircle, Search, Code, Rocket } from 'lucide-react'
 import { Navbar } from "@/components/Navbar"
 import { useTheme } from '@/context/theme-context'
-import { Footer } from './components/Footer'
-import { CardGrid } from './components/CardGrid';
+import { Footer } from '@/components/Footer'
+import { CardGrid } from '@/components/CardGrid';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/Card";
+import { Roadmap } from "@/components/Roadmap";
 import ConsultationIcon from '@/assets/icons/consultation.svg?react'
 import AuditIcon from "@/assets/icons/audit.svg?react"
 import DevelopmentIcon from "@/assets/icons/development.svg?react"
@@ -19,9 +20,15 @@ function App() {
   }, [dark])
 
   const { t /*, i18n */ } = useTranslation()
+        const steps = [
+  { number: '01', title: 'Discovery', description: '...' },
+  { number: '02', title: 'Design', description: '...' },
+  { number: '03', title: 'Development', description: '...' },
+  { number: '04', title: 'Launch', description: '...' },
+]
 
   return (
-    <div className={`text-justify break-all hyphens-auto min-h-screen bg-background text-foreground font-sans transition-colors overflow-x-hidden duration-200`}>
+    <div className={`text-justify break-all text-pretty hyphens-auto min-h-screen bg-background text-foreground font-sans transition-colors overflow-x-hidden duration-200`}>
 
       <Navbar />
 
@@ -108,7 +115,7 @@ function App() {
       {/* SERVICES */}
       <section id="services" className="py-32 px-8 md:px-16 lg:px-24 border-t border-border">
         <h2 className='text-3xl py-8 uppercase'>
-          Our Services
+          {t('home.services.section-title')}
         </h2>
         <CardGrid columns={3}>
           <Card className="flex flex-col">
@@ -168,6 +175,23 @@ function App() {
             </CardFooter>
           </Card>
         </CardGrid>
+      </section>
+      
+      {/* PROCESS */}
+      <section id='process' className="py-32 px-8 md:px-16 lg:px-24 border-t border-border">
+        <h2 className='text-3xl py-8 uppercase'>
+          {t('home.process.section-title')}
+        </h2>
+
+        <p className='pb-16'>
+          {t('home.process.section-description')}
+        </p>
+        <Roadmap steps={[
+          { number: '01', icon: <MessageCircle className='size-4 md:size-7' />, title: t('home.process.steps.step-1.title'), description: t('home.process.steps.step-1.description') },
+          { number: '02', icon: <Search className='size-4 md:size-7' />, title: t('home.process.steps.step-2.title'), description: t('home.process.steps.step-2.description') },
+          { number: '03', icon: <Code className='size-4 md:size-7' />, title: t('home.process.steps.step-3.title'), description: t('home.process.steps.step-3.description') },
+          { number: '04', icon: <Rocket className='size-4 md:size-7' />, title: t('home.process.steps.step-4.title'), description: t('home.process.steps.step-4.description') },
+        ]} />
       </section>
 
       {/* CONTACT */}

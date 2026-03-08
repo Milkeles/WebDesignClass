@@ -86,7 +86,7 @@ export function Footer() {
                 </p>
                 <div className="flex gap-4">
                     {legalLinks.map(({ label, href }) => (
-                        <Button key={href} variant="navigation" asChild className="justify-start w-fit h-fit p-0 text-muted-foreground hover:text-foreground normal-case tracking-normal font-normal text-xs">
+                        <Button key={href} variant="link" asChild className="justify-start w-fit h-fit p-0 text-muted-foreground hover:text-foreground normal-case tracking-normal font-normal text-xs">
                             <NavLink to={href}>{t(label)}</NavLink>
                         </Button>
                     ))}

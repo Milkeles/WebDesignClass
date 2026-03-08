@@ -36,6 +36,7 @@
       "metric-3-text": "Of visitors leave after 3 seconds. Yours won't."
     },
     "services": {
+      "section-title": "Our Services",
       "consultation": {
         "title": "Consultation",
         "description": "Talk with one of our experts about your website, conversion goals, and growth opportunities. We'll suggest practical ways to attract more visitors and turn them into customers.",
@@ -50,6 +51,28 @@
         "title": "Website Development",
         "description": "We design and build fast, modern websites optimized for performance, search engines, and conversions.",
         "action": "Start Your Project"
+      }
+    },
+    "process": {
+      "section-title": "How Our Process Works",
+      "section-description": "See exactly how we work with clients from first contact to a high-performing, conversion-optimized website. This roadmap shows each step so you know what to expect and how we ensure results.",
+      "steps": {
+        "step-1": {
+          "title": "Free Consultation",
+          "description": "Talk to one of our experts about your website, goals, and conversion challenges. We’ll show you opportunities for growth before you spend a single dime."
+        },
+        "step-2": {
+          "title": "Audit & Analysis",
+          "description": "Most redesigns fail to improve conversions. We analyze your site using scientific web design principles, evaluating usability, performance, and conversion potential. Only after we know what works, we make changes."
+        },
+        "step-3": {
+          "title": "Design & Development",
+          "description": "We create a fast, conversion-optimized website, implementing only changes proven to increase conversions through A/B testing and user behavior analysis."
+        },
+        "step-4": {
+          "title": "Launch & Grow",
+          "description": "Your site goes live, but the work doesn’t stop. We track results, optimize designs based on data, and continually improve conversions so your website keeps generating revenue."
+        }
       }
     }
   },
