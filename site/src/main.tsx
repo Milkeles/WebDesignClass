@@ -1,6 +1,6 @@
 import { StrictMode, useState, useEffect, useMemo, lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { ThemeContext } from './context/theme-context.tsx'
 import './index.css'
@@ -28,7 +28,7 @@ function Root() {
     <StrictMode>
       <HelmetProvider>
         <ThemeContext.Provider value={themeValue}>
-          <BrowserRouter basename="/WebDesignClass/">
+          <HashRouter basename="/WebDesignClass/">
             <Suspense fallback={null}>
               <Routes>
                 <Route path="/" element={<App />} />
@@ -38,7 +38,7 @@ function Root() {
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </Suspense>
-          </BrowserRouter>
+          </HashRouter>
         </ThemeContext.Provider>
       </HelmetProvider>
     </StrictMode>
