@@ -24,6 +24,16 @@
   <link rel="alternate" hreflang="bg" href="https://milkeles.github.io/WebDesignClass/bg/">
 
   <link rel="icon" type="image/svg+xml" href="%BASE_URL%logo.svg" />
+
+  <!--Opening links in the page directly results in 404 unless redirected dynamically-->
+  <script>
+    var path = globalThis.location.pathname.replace('/WebDesignClass', '');
+    var search = globalThis.location.search;
+    var hash = globalThis.location.hash;
+    var url = '/WebDesignClass/?p=' + encodeURIComponent(path + search) + hash;
+    globalThis.location.replace(url);
+  </script>
+  
 </head>
 
 <body>

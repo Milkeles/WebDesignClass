@@ -12,6 +12,11 @@ const Services = lazy(() => import("./pages/Services.tsx"))
 const Work = lazy(() => import("./pages/Work.tsx"))
 const Contact = lazy(() => import("./pages/Contact.tsx"))
 
+const redirect = new URLSearchParams(globalThis.location.search).get('p')
+if (redirect) {
+  globalThis.history.replaceState(null, '', '/WebDesignClass' + redirect)
+}
+
 function Root() {
   const [dark, setDark] = useState(true)
 
