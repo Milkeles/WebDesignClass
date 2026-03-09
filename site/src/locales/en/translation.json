@@ -94,24 +94,77 @@
       }
     }
   },
-  "about": {},
+  "about": {
+    "eyebrow": "About Us",
+    "title": "We Build Websites That Work",
+    "description": "Fervor Web is a small web agency focused on building high-performance, conversion-optimized websites for small businesses, startups, and creators.",
+    "information": {
+      "eyebrow": "Our Story",
+      "title": "Where It All Started",
+      "description": "Fervor Web started as a conceptual website for a small boutique web agency specializing in high-performance websites for small businesses for a Web Design Class project in 2026. It still is exactly that. We build customer-centric websites focused on high performance, conversion rate, and SEO, all delivered quickly and maintained affordably through a straightforward subscription model. Too many businesses invest in a website that looks good but fails to convert visitors into customers. Fervor Web combines technical excellence, scientific design principles, and a focus on measurable results. We are a small but dedicated team, and we treat every project as if it were our own business."
+    },
+    "values": {
+      "eyebrow": "What We Stand For",
+      "title": "Our Values",
+      "description": "These aren't words on a wall. They're the principles that guide every decision we make.",
+      "results": {
+        "title": "Results Are the Only Metric That Matters",
+        "description": "We measure success by one thing: did your business grow? Every decision, every pixel, every line of code is evaluated against that standard."
+      },
+      "detail": {
+        "title": "Obsessive Attention to Detail",
+        "description": "The difference between good and exceptional lives in the details. We sweat the small things because our clients' customers notice them even when they don't."
+      },
+      "honesty": {
+        "title": "Honest Advice, Always",
+        "description": "We tell clients what they need to hear, not what they want to hear. We treat every client's business as if it were our own."
+      },
+      "accessibility": {
+        "title": "Accessibility Is Non-Negotiable",
+        "description": "Great websites work for everyone — regardless of ability, device, or connection speed. We build with inclusion as a baseline, not an afterthought."
+      },
+      "partnerships": {
+        "title": "Long-Term Partnerships Over Quick Wins",
+        "description": "We're not interested in one-off projects. We want to be the team you call when your business grows, pivots, or needs to level up."
+      },
+      "reputation": {
+        "title": "We Earn Our Reputation With Every Project",
+        "description": "Our real product isn't websites — it's the results our clients achieve and the stories they tell about working with us."
+      }
+    },
+    "team": {
+      "eyebrow": "The People Behind the Work",
+      "title": "Meet Our Team",
+      "description": "A small team with a big focus on results.",
+      "member-1": {
+        "name": "Hristo Hristov",
+        "role": "Founder",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque, ipsum in aliquet fringilla, dolor leo consequat risus, eget mollis dolor felis id ligula. Maecenas efficitur vulputate feugiat. Etiam eleifend justo eu tellus bibendum, non pellentesque mauris dapibus. Integer mattis arcu eu blandit congue. Donec in accumsan metus. Suspendisse potenti. Nulla mattis nec ante non tempus. Donec mattis, libero vel sodales tempus, purus erat euismod mi, nec malesuada lectus nisi a ante. Nullam nec tellus pulvinar, scelerisque augue in, consequat eros. Nulla ut finibus metus, sit amet accumsan orci. Integer a bibendum est. Quisque elit diam, blandit non varius sit amet, pulvinar sit amet dolor. Aliquam molestie porta posuere."
+      },
+      "member-2": {
+        "name": "Team Member",
+        "role": "Role",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque, ipsum in aliquet fringilla, dolor leo consequat risus, eget mollis dolor felis id ligula. Maecenas efficitur vulputate feugiat. Etiam eleifend justo eu tellus bibendum, non pellentesque mauris dapibus. Integer mattis arcu eu blandit congue. Donec in accumsan metus. Suspendisse potenti. Nulla mattis nec ante non tempus. Donec mattis, libero vel sodales tempus, purus erat euismod mi, nec malesuada lectus nisi a ante. Nullam nec tellus pulvinar, scelerisque augue in, consequat eros. Nulla ut finibus metus, sit amet accumsan orci. Integer a bibendum est. Quisque elit diam, blandit non varius sit amet, pulvinar sit amet dolor. Aliquam molestie porta posuere."
+      }
+    }
+  },
   "services": {},
   "contact": {
-  "eyebrow": "Get In Touch",
-  "title": "Let's Work Together",
-  "description": "Have a project in mind? We'd love to hear about it. Fill out the form and we'll get back to you within 24 hours.",
-  "section-eyebrow": "Contact",
-  "section-title": "Send Us a Message",
-  "map-title": "Our location on Google Maps",
-  "form": {
-    "first-name": "First Name",
-    "last-name": "Last Name",
-    "email": "Email Address",
-    "phone": "Phone Number",
-    "website": "Website Address",
-    "message": "How can we help you?",
-    "optional": "optional",
-    "submit": "Send Message"
+    "eyebrow": "Get In Touch",
+    "title": "Let's Work Together",
+    "description": "Have a project in mind? We'd love to hear about it. Fill out the form and we'll get back to you within 24 hours.",
+    "section-eyebrow": "Contact",
+    "section-title": "Send Us a Message",
+    "map-title": "Our location on Google Maps",
+    "form": {
+      "first-name": "First Name",
+      "last-name": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "website": "Website Address",
+      "message": "How can we help you?",
+      "optional": "optional",
+      "submit": "Send Message"
+    }
   }
-}
 }

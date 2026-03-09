@@ -7,13 +7,20 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { Section } from '@/components/Section'
 import { Button } from '@/components/ui/Button'
+import { Helmet } from 'react-helmet-async'
 
 export default function Contact() {
   const { t } = useTranslation()
   const [phone, setPhone] = useState<string>('')
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground font-sans transition-colors duration-500">
+      <Helmet>
+        <title>Contact — Fervor Web</title>
+        <meta name="description" content="Contact FervorWeb regarding our services or to ask a question." />
+        <meta property="og:title" content="Contact — Fervor Web" />
+        <meta property="og:description" content="Contact FervorWeb regarding our services or to ask a question." />
+      </Helmet>
       <Navbar />
       <HeroSection
         eyebrow={t('contact.eyebrow')}
