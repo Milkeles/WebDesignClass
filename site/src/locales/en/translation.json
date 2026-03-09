@@ -25,6 +25,7 @@
       "eyebrow": "small businesses • startups • creators",
       "title": "Websites Built to Turn More Visitors Into Customers",
       "description": "At FervorWeb, we build high-performance websites designed to load fast, rank well, and convert visitors into paying customers.",
+      "image-alt": "Image of a smiling person",
       "primary-cta": "Get Your FREE Consultation",
       "secondary-cta": "See Our Work",
       "metrics": "What we deliver:",
@@ -68,7 +69,11 @@
         "title": "Portfolio Website",
         "description": "A clean, conversion-focused portfolio site for a creative professional. Designed to communicate credibility and drive inquiries, with a lighthouse score above 98 and sub-second load times.",
         "alt": "Portfolio website screenshot"
-      }
+      },
+      "footer-text-1": "If you're still curious and want to see what we've built for others, feel free to check",
+      "footer-cta-1": "more of our websites.",
+      "footer-text-2": "Or skip the browsing and get in touch with us today to",
+      "footer-cta-2": "create your own one."
     },
     "process": {
       "section-eyebrow": "Learn",
@@ -148,7 +153,11 @@
       }
     }
   },
-  "services": {},
+  "services": {
+    "eyebrow": "",
+    "title": "",
+    "description": ""
+  },
   "contact": {
     "eyebrow": "Get In Touch",
     "title": "Let's Work Together",

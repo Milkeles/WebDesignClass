@@ -20,32 +20,15 @@ interface MediaCardProps {
     }
 }
 
-export function MediaCard({ title, description, href, ctaLabel, image, reverse, children }: MediaCardProps) {
+export function MediaCard({ title, description, href, ctaLabel, image, reverse, children }: Readonly<MediaCardProps>) {
     const hasContent = title || description || href || children
 
     return (
-        <div className={`flex flex-col gap-12 ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center`}>
-            {/* Content */}
-            {hasContent && (
-                <div className={`flex-1 flex flex-col gap-6 ${reverse ? '' : 'text-right items-end'}`}>
-                    {title && <h3 className="text-3xl font-black tracking-tight">{title}</h3>}
-                    {description && <p className="text-muted-foreground leading-relaxed">{description}</p>}
-                    {children}
-                    {href && (
-                        <Button variant="secondary" className="w-fit" asChild>
-                            <a href={href} target="_blank" rel="noopener noreferrer">
-                                {ctaLabel ?? 'Visit site'}
-                                <ArrowRight size={14} strokeWidth={2.5} />
-                            </a>
-                        </Button>
-                    )}
-                </div>
-            )}
-
+        <div className={`flex flex-col md:gap-12  ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center`}>
             {/* Image */}
             <div className={`flex-1 aspect-video overflow-hidden ${reverse
-                    ? 'rounded-tr-[clamp(32px,6vw,128px)] rounded-bl-[clamp(32px,6vw,128px)]'
-                    : 'rounded-tl-[clamp(32px,6vw,128px)] rounded-br-[clamp(32px,6vw,128px)]'
+                    ? 'rounded-tl-[clamp(32px,6vw,128px)] rounded-br-[clamp(32px,6vw,128px)]'
+                    : 'rounded-tr-[clamp(32px,6vw,128px)] rounded-bl-[clamp(32px,6vw,128px)]'
                 }`}>
                 <picture>
                     {(Array.isArray(image.picture.sources)
@@ -71,6 +54,24 @@ export function MediaCard({ title, description, href, ctaLabel, image, reverse, 
                     />
                 </picture>
             </div>
+
+            {/* Content */}
+            {hasContent && (
+                <div className={`flex-1 flex flex-col gap-6 ${reverse ? '' : 'text-right items-end'}`}>
+                    {title && <h3 className="text-3xl font-black tracking-tight">{title}</h3>}
+                    {description && <p className="text-muted-foreground leading-relaxed">{description}</p>}
+                    {children}
+                    {href && (
+                        <Button variant="secondary" className="w-fit" asChild>
+                            <a href={href} target="_blank" rel="noopener noreferrer">
+                                {ctaLabel ?? 'Visit site'}
+                                <ArrowRight size={14} strokeWidth={2.5} />
+                            </a>
+                        </Button>
+                    )}
+                </div>
+            )}
+
         </div>
     )
 }

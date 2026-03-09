@@ -201,6 +201,8 @@ function App() {
           }}
         />
 
+        <hr className = "m-12"></hr>
+
         <MediaCard
           title={t('home.work.project-2.title')}
           description={t('home.work.project-2.description')}
@@ -213,6 +215,23 @@ function App() {
           }}
         />
 
+        <div className = 'flex mt-12'> 
+          <p className='text-lg text-muted-foreground flex-initial'> {t('home.work.footer-text-1')}
+            <Button variant='link' className = 'px-1' asChild>
+              <NavLink to="/work">
+                {t('home.work.footer-cta-1')}
+              </NavLink>
+            </Button>
+          </p>
+          <p className='text-lg text-muted-foreground flex-initial'>
+            {t('home.work.footer-text-2')}
+            <Button variant='link' className = 'px-1' asChild>
+              <NavLink to="/contact">
+                {t('home.work.footer-cta-2')}
+              </NavLink>
+            </Button>
+          </p>
+        </div>
       </Section>
 
       {/* PROCESS */}

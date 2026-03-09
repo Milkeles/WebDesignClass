@@ -1,3 +1,6 @@
+/** Card Grid component that
+ * 
+ */
 import { type ReactNode, Children } from "react"
 import {
   Carousel,
