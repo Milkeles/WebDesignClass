@@ -307,3 +307,8 @@
 .fi-bg {
   background-image: url('flag-icons/flags/4x3/bg.svg');
 }
+
+.PhoneInputCountrySelect {
+  background-color: var(--background);
+  color: var(--foreground);
+}

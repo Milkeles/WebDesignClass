@@ -96,5 +96,22 @@
   },
   "about": {},
   "services": {},
-  "contact": {}
+  "contact": {
+  "eyebrow": "Get In Touch",
+  "title": "Let's Work Together",
+  "description": "Have a project in mind? We'd love to hear about it. Fill out the form and we'll get back to you within 24 hours.",
+  "section-eyebrow": "Contact",
+  "section-title": "Send Us a Message",
+  "map-title": "Our location on Google Maps",
+  "form": {
+    "first-name": "First Name",
+    "last-name": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "website": "Website Address",
+    "message": "How can we help you?",
+    "optional": "optional",
+    "submit": "Send Message"
+  }
+}
 }

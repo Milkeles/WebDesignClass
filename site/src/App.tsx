@@ -9,7 +9,8 @@ import { CardGrid } from '@/components/CardGrid';
 import { Section } from "@/components/Section"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/Card";
 import { Roadmap } from "@/components/Roadmap";
-import { FeaturedProject } from '@/components/FeaturedProject'
+import { MediaCard } from '@/components/MediaCard'
+import { NavLink } from 'react-router-dom'
 import ConsultationIcon from '@/assets/icons/consultation.svg?react'
 import AuditIcon from "@/assets/icons/audit.svg?react"
 import DevelopmentIcon from "@/assets/icons/development.svg?react"
@@ -27,7 +28,7 @@ function App() {
   const { t /*, i18n */ } = useTranslation()
 
   return (
-    <div className={`text-justify break-all hyphens-auto min-h-screen bg-background text-foreground font-sans transition-colors overflow-x-hidden duration-200`}>
+    <div className={`min-h-screen bg-background text-foreground font-sans transition-colors overflow-x-hidden duration-200`}>
 
       <Navbar />
 
@@ -61,13 +62,15 @@ function App() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-200">
               <Button variant="default" effect="shineHover" className="w-auto" asChild>
-                <a href="#contact">
+                <NavLink to="/contact#contact-form">
                   {t('home.hero.primary-cta')}
                   <ArrowRight size={14} strokeWidth={2.5} />
-                </a>
+                </NavLink>
               </Button>
               <Button variant="secondary" className="w-auto" asChild>
-                <a href="#hero">{t('home.hero.secondary-cta')}</a>
+                <NavLink to="/work">
+                  {t('home.hero.secondary-cta')}
+                </NavLink>
               </Button>
             </div>
           </div>
@@ -187,20 +190,22 @@ function App() {
         title={t('home.work.section-title')}
         description={t('home.work.section-description')}
       >
-        <FeaturedProject
+        <MediaCard
           title={t('home.work.project-1.title')}
           description={t('home.work.project-1.description')}
           href="https://fervorgames.com"
+          ctaLabel={t('home.work.visit-site')}
           image={{
             picture: Showcase1,
             alt: t('home.work.project-1.alt'),
           }}
         />
 
-        <FeaturedProject
+        <MediaCard
           title={t('home.work.project-2.title')}
           description={t('home.work.project-2.description')}
           href="https://milkeles.github.io/Portfolio-Site"
+          ctaLabel={t('home.work.visit-site')}
           reverse
           image={{
             picture: Showcase2,

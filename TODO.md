@@ -29,7 +29,7 @@ Finished: 08/08/2026
 - [ ] About Page
 - [ ] Services and Pricing Page
 - [ ] Previous Work / Clients page
-- [ ] Contact Page
+- [x] Contact Page
 
 Started: 08/08/2026
 

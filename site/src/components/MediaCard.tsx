@@ -1,36 +1,46 @@
 import { Button } from '@/components/ui/Button'
 import { ArrowRight } from 'lucide-react'
+import { type ReactNode } from 'react'
 
 interface PictureData {
     sources: { srcset: string; type: string }[] | Record<string, string>
     img: { src: string; w?: number; h?: number }
 }
 
-interface FeaturedProjectProps {
-    title: string
-    description: string
-    href: string
+interface MediaCardProps {
+    title?: string
+    description?: string
+    href?: string
+    ctaLabel?: string
     reverse?: boolean
+    children?: ReactNode
     image: {
         picture: PictureData
         alt: string
     }
 }
 
-export function FeaturedProject({ title, description, href, image, reverse }: FeaturedProjectProps) {
+export function MediaCard({ title, description, href, ctaLabel, image, reverse, children }: MediaCardProps) {
+    const hasContent = title || description || href || children
+
     return (
-        <div className={`flex flex-col gap-12 ${reverse ? 'md:flex-row-reverse' : 'md:flex-row '} items-center`}>
+        <div className={`flex flex-col gap-12 ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center`}>
             {/* Content */}
-            <div className={`flex-1 flex flex-col gap-6 ${reverse ? '' : 'text-right items-end'}`}>
-                <h3 className="text-3xl font-black tracking-tight">{title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{description}</p>
-                <Button variant="secondary" className="w-fit" asChild>
-                    <a href={href} target="_blank" rel="noopener noreferrer">
-                        Visit site
-                        <ArrowRight size={14} strokeWidth={2.5} />
-                    </a>
-                </Button>
-            </div>
+            {hasContent && (
+                <div className={`flex-1 flex flex-col gap-6 ${reverse ? '' : 'text-right items-end'}`}>
+                    {title && <h3 className="text-3xl font-black tracking-tight">{title}</h3>}
+                    {description && <p className="text-muted-foreground leading-relaxed">{description}</p>}
+                    {children}
+                    {href && (
+                        <Button variant="secondary" className="w-fit" asChild>
+                            <a href={href} target="_blank" rel="noopener noreferrer">
+                                {ctaLabel ?? 'Visit site'}
+                                <ArrowRight size={14} strokeWidth={2.5} />
+                            </a>
+                        </Button>
+                    )}
+                </div>
+            )}
 
             {/* Image */}
             <div className={`flex-1 aspect-video overflow-hidden ${reverse
