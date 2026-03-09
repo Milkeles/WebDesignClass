@@ -54,9 +54,9 @@ All three fonts are modern looking and geometric, creating a feel of creativity 
 
 ## Components and Styling
 ### Minimum Text Size
-- Headings: 28-24-20 px
-- Normal text: 16 px
-- Small text: 14 px
+- Headings: 32-28-24 px
+- Normal text: 18 px
+- Small text: 16 px
 
 ### Text Style
 - Headings: Bold 700

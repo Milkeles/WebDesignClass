@@ -36,6 +36,7 @@
       "metric-3-text": "Of visitors leave after 3 seconds. Yours won't."
     },
     "services": {
+      "section-eyebrow": "Check out",
       "section-title": "Our Services",
       "consultation": {
         "title": "Consultation",
@@ -53,7 +54,24 @@
         "action": "Start Your Project"
       }
     },
+    "work": {
+      "section-eyebrow": "Featured Work",
+      "section-title": "Projects We're Proud Of",
+      "section-description": "A selection of recent projects that showcase our approach to performance, design, and conversion-focused development.",
+      "visit-site": "Visit site",
+      "project-1": {
+        "title": "Fervor Games",
+        "description": "A mobile-first web presence for an indie game development studio. Built for speed and engagement, the site reflects the brand's energy while delivering a seamless experience across all devices.",
+        "alt": "Fervor Games website screenshot"
+      },
+      "project-2": {
+        "title": "Portfolio Website",
+        "description": "A clean, conversion-focused portfolio site for a creative professional. Designed to communicate credibility and drive inquiries, with a lighthouse score above 98 and sub-second load times.",
+        "alt": "Portfolio website screenshot"
+      }
+    },
     "process": {
+      "section-eyebrow": "Learn",
       "section-title": "How Our Process Works",
       "section-description": "See exactly how we work with clients from first contact to a high-performing, conversion-optimized website. This roadmap shows each step so you know what to expect and how we ensure results.",
       "steps": {

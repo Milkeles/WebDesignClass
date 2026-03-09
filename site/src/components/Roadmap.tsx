@@ -17,7 +17,7 @@ interface RoadmapProps {
     steps: RoadmapStep[]
 }
 
-export function Roadmap({ steps }: RoadmapProps) {
+export function Roadmap({ steps }: Readonly<RoadmapProps>) {
     const [open, setOpen] = useState<string>('')
 
     return (
@@ -32,7 +32,7 @@ export function Roadmap({ steps }: RoadmapProps) {
                         <AccordionTrigger className="font-bold text-lg py-2">
                             {title}
                         </AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground text-sm leading-relaxed">
+                        <AccordionContent className="text-muted-foreground leading-relaxed">
                             {description}
                         </AccordionContent>
                     </AccordionItem>
@@ -57,7 +57,7 @@ export function Roadmap({ steps }: RoadmapProps) {
                                 {title}
                             </AccordionTrigger>
                         </div>
-                        <AccordionContent className="text-muted-foreground text-sm leading-relaxed">
+                        <AccordionContent className="text-muted-foreground leading-relaxed">
                             {description}
                         </AccordionContent>
                     </AccordionItem>

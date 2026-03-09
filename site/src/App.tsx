@@ -6,11 +6,17 @@ import { Navbar } from "@/components/Navbar"
 import { useTheme } from '@/context/theme-context'
 import { Footer } from '@/components/Footer'
 import { CardGrid } from '@/components/CardGrid';
+import { Section } from "@/components/Section"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/Card";
 import { Roadmap } from "@/components/Roadmap";
+import { FeaturedProject } from '@/components/FeaturedProject'
 import ConsultationIcon from '@/assets/icons/consultation.svg?react'
 import AuditIcon from "@/assets/icons/audit.svg?react"
 import DevelopmentIcon from "@/assets/icons/development.svg?react"
+import Showcase1 from '@/assets/Showcase1.jpg?w=400;800;1200&format=avif;webp;jpg&as=picture'
+import Showcase2 from '@/assets/Showcase2.jpg?w=400;800;1200&format=avif;webp;jpg&as=picture'
+
+console.log(Showcase1)
 
 function App() {
   const { dark } = useTheme()
@@ -20,12 +26,6 @@ function App() {
   }, [dark])
 
   const { t /*, i18n */ } = useTranslation()
-        const steps = [
-  { number: '01', title: 'Discovery', description: '...' },
-  { number: '02', title: 'Design', description: '...' },
-  { number: '03', title: 'Development', description: '...' },
-  { number: '04', title: 'Launch', description: '...' },
-]
 
   return (
     <div className={`text-justify break-all text-pretty hyphens-auto min-h-screen bg-background text-foreground font-sans transition-colors overflow-x-hidden duration-200`}>
@@ -113,15 +113,15 @@ function App() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-32 px-8 md:px-16 lg:px-24 border-t border-border">
-        <h2 className='text-3xl py-8 uppercase'>
-          {t('home.services.section-title')}
-        </h2>
+      <Section id="services"
+        eyebrow={t('home.services.section-eyebrow')}
+        title={t('home.services.section-title')}
+      >
         <CardGrid columns={3}>
           <Card className="flex flex-col">
             <CardHeader>
               <div className="flex items-center gap-2">
-                <ConsultationIcon width={80} height={80} className="text-primary"/>
+                <ConsultationIcon width={80} height={80} className="text-primary" />
                 <CardTitle> <h3 className="text-2xl"> {t('home.services.consultation.title')} </h3> </CardTitle>
               </div>
             </CardHeader>
@@ -140,7 +140,7 @@ function App() {
           <Card className="flex flex-col">
             <CardHeader>
               <div className="flex items-center gap-2">
-                <AuditIcon width={80} height={80} className="text-primary"/>
+                <AuditIcon width={80} height={80} className="text-primary" />
                 <CardTitle> <h3 className="text-2xl"> {t('home.services.audit.title')} </h3> </CardTitle>
               </div>
             </CardHeader>
@@ -159,7 +159,7 @@ function App() {
           <Card className="flex flex-col">
             <CardHeader>
               <div className="flex items-center gap-2">
-                <DevelopmentIcon width={80} height={80} className="text-primary"/>
+                <DevelopmentIcon width={80} height={80} className="text-primary" />
                 <CardTitle> <h3 className="text-2xl"> {t('home.services.development.title')} </h3> </CardTitle>
               </div>
             </CardHeader>
@@ -175,65 +175,52 @@ function App() {
             </CardFooter>
           </Card>
         </CardGrid>
-      </section>
-      
-      {/* PROCESS */}
-      <section id='process' className="py-32 px-8 md:px-16 lg:px-24 border-t border-border">
-        <h2 className='text-3xl py-8 uppercase'>
-          {t('home.process.section-title')}
-        </h2>
+      </Section>
 
-        <p className='pb-16'>
-          {t('home.process.section-description')}
-        </p>
+
+      {/* FEATURED WORK */}
+      
+      <Section id="work"
+        eyebrow={t('home.work.section-eyebrow')}
+        title={t('home.work.section-title')}
+        description={t('home.work.section-description')}
+      >
+        <FeaturedProject
+          title={t('home.work.project-1.title')}
+          description={t('home.work.project-1.description')}
+          href="https://fervorgames.com"
+          image={{
+            picture: Showcase1,
+            alt: t('home.work.project-1.alt'),
+          }}
+        />
+
+        <FeaturedProject
+          title={t('home.work.project-2.title')}
+          description={t('home.work.project-2.description')}
+          href="https://milkeles.github.io/Portfolio-Site"
+          reverse
+          image={{
+            picture: Showcase2,
+            alt: t('home.work.project-2.alt'),
+          }}
+        />
+
+      </Section>
+
+      {/* PROCESS */}
+      <Section id="process"
+        eyebrow={t('home.process.section-eyebrow')}
+        title={t('home.process.section-title')}
+        description={t('home.process.section-description')}
+      >
         <Roadmap steps={[
           { number: '01', icon: <MessageCircle className='size-4 md:size-7' />, title: t('home.process.steps.step-1.title'), description: t('home.process.steps.step-1.description') },
           { number: '02', icon: <Search className='size-4 md:size-7' />, title: t('home.process.steps.step-2.title'), description: t('home.process.steps.step-2.description') },
           { number: '03', icon: <Code className='size-4 md:size-7' />, title: t('home.process.steps.step-3.title'), description: t('home.process.steps.step-3.description') },
           { number: '04', icon: <Rocket className='size-4 md:size-7' />, title: t('home.process.steps.step-4.title'), description: t('home.process.steps.step-4.description') },
         ]} />
-      </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="px-8 md:px-16 lg:px-24 py-32 border-t border-border">
-        <div className="max-w-2xl">
-          <p className="text-xs font-bold tracking-[0.4em] uppercase text-muted-foreground mb-6">Contact</p>
-          <h2
-            className="text-4xl md:text-6xl font-black tracking-tight mb-6"
-          >
-            I don't know
-          </h2>
-          <p className="text-muted-foreground mb-12 text-lg">
-            I answer within 10 business years. I promise.
-          </p>
-
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="Your name"
-                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-sm placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
-              />
-              <input
-                type="email"
-                placeholder="Email address"
-                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-sm placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
-              />
-            </div>
-            <textarea
-              rows={5}
-              placeholder="Say something here..."
-              className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-sm placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors resize-none"
-            />
-            <button
-              type="submit"
-              className="px-8 py-4 bg-primary text-primary-foreground font-bold tracking-wide text-sm uppercase rounded-sm hover:opacity-90 transition-opacity"
-            >
-              Send message
-            </button>
-          </form>
-        </div>
-      </section>
+      </Section>
 
       <Footer />
 

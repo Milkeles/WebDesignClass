@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
 import { playwright } from '@vitest/browser-playwright';
 import svgr from 'vite-plugin-svgr'
+import { imagetools } from 'vite-imagetools'
 
 const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
@@ -27,7 +28,7 @@ function fontPreloadPlugin() {
 }
 
 export default defineConfig({
-  plugins: [react(), svgr(), tailwindcss(), fontPreloadPlugin()],
+  plugins: [react(), svgr(), imagetools(), tailwindcss(), fontPreloadPlugin()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src")
