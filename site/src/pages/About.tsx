@@ -7,8 +7,8 @@ import { Section } from '@/components/Section'
 import { CardGrid } from '@/components/CardGrid'
 import { TeamMember } from "@/components/TeamMember"
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/Card'
-import HeroImage from '@/assets/hero-image.jpg?w=256;320;640&format=avif;webp;jpg&as=picture'
-import TeamMember2 from '@/assets/hero-image.jpg?w=256;320;640&format=avif;webp;jpg&as=picture'
+import TeamMember1 from '@/assets/hristo.png?w=256;320;640&format=avif;webp;jpg&as=picture'
+import TeamMember2 from '@/assets/rix.png?w=256;320;640&format=avif;webp;jpg&as=picture'
 
 export default function About() {
   const { t } = useTranslation()
@@ -44,8 +44,11 @@ export default function About() {
         id="information"
         eyebrow={t('about.information.eyebrow')}
         title={t('about.information.title')}
-        description={t('about.information.description')}
-      />
+      >
+        <p className="text-muted-foreground leading-relaxed columns-2 gap-12">
+          {t('about.information.description')}
+        </p>
+      </Section>
 
       {/* Values */}
       <Section
@@ -84,7 +87,7 @@ export default function About() {
             name={t('about.team.member-1.name')}
             role={t('about.team.member-1.role')}
             description={t('about.team.member-1.description')}
-            picture={HeroImage}
+            picture={TeamMember1}
             alt={t('about.team.member-1.name')}
           />
           <TeamMember

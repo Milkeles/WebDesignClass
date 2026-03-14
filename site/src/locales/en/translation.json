@@ -144,12 +144,12 @@
       "member-1": {
         "name": "Hristo Hristov",
         "role": "Founder",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque, ipsum in aliquet fringilla, dolor leo consequat risus, eget mollis dolor felis id ligula. Maecenas efficitur vulputate feugiat. Etiam eleifend justo eu tellus bibendum, non pellentesque mauris dapibus. Integer mattis arcu eu blandit congue. Donec in accumsan metus. Suspendisse potenti. Nulla mattis nec ante non tempus. Donec mattis, libero vel sodales tempus, purus erat euismod mi, nec malesuada lectus nisi a ante. Nullam nec tellus pulvinar, scelerisque augue in, consequat eros. Nulla ut finibus metus, sit amet accumsan orci. Integer a bibendum est. Quisque elit diam, blandit non varius sit amet, pulvinar sit amet dolor. Aliquam molestie porta posuere."
+        "description": "Hristo is a software engineering student at the University of Ruse who's been building games since he was a 8 years old, one of which has racked up over 26 million visits. These days he splits his time between game development and web work, with a focus on conversion rate optimization and performance, building high-performance websites using modern frameworks and methods. His experience combines deep technical skills and strong eye for design."
       },
       "member-2": {
-        "name": "Team Member",
-        "role": "Role",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque, ipsum in aliquet fringilla, dolor leo consequat risus, eget mollis dolor felis id ligula. Maecenas efficitur vulputate feugiat. Etiam eleifend justo eu tellus bibendum, non pellentesque mauris dapibus. Integer mattis arcu eu blandit congue. Donec in accumsan metus. Suspendisse potenti. Nulla mattis nec ante non tempus. Donec mattis, libero vel sodales tempus, purus erat euismod mi, nec malesuada lectus nisi a ante. Nullam nec tellus pulvinar, scelerisque augue in, consequat eros. Nulla ut finibus metus, sit amet accumsan orci. Integer a bibendum est. Quisque elit diam, blandit non varius sit amet, pulvinar sit amet dolor. Aliquam molestie porta posuere."
+        "name": "Ricks",
+        "role": "Pet | QA specialist",
+        "description": "Meet Rix, Fervor Web's resident quality assurance specialist. A competitive programmer of pupil rank on Codeforces, he brings a sharp eye for detail and an unmatched ability to sit still under pressure. When he's not reviewing code, he can be found lying down on the job, which boosts the team's morale and motivation significantly."
       }
     }
   },
@@ -158,7 +158,6 @@
     "title": "Websites Built for Performance",
     "description": "Our services cover strategy, website audits, and high-performance development. Everything we do is designed to attract more visitors and turn them into customers.",
     "cta": "Contact us",
-
     "consultation": {
       "eyebrow": "strategy session",
       "title": "Free Website Consultation",
@@ -169,7 +168,6 @@
         "description": "In a focused consultation, we review your current website, discuss your business goals, and suggest practical strategies to improve conversions and performance."
       }
     },
-
     "audit": {
       "eyebrow": "deep analysis",
       "title": "Website Audit",
@@ -180,7 +178,6 @@
         "description": "We evaluate your site's design, performance, and user journey to identify friction points and opportunities to improve engagement and conversions."
       }
     },
-
     "development": {
       "eyebrow": "performance development",
       "title": "High-Performance Website Development",
@@ -190,6 +187,26 @@
         "title": "Conversion-Focused Development",
         "description": "Your website is built with speed, scalability, and conversions in mind—ensuring visitors enjoy a seamless experience and are more likely to become customers."
       }
+    }
+  },
+  "work": {
+    "eyebrow": "Our Portfolio",
+    "title": "Websites We've Built & Improved",
+    "description": "A selection of projects across our three core services — from full builds to audits and strategic consultations.",
+    "development": {
+      "eyebrow": "Built from Scratch",
+      "title": "Development Projects",
+      "description": "High-performance websites designed and developed from the ground up with a focus on speed, accessibility, and conversions."
+    },
+    "consultation": {
+      "eyebrow": "Strategy and Direction",
+      "title": "Consultation Projects",
+      "description": "Helping businesses find the right path forwardm before writing a single line of code."
+    },
+    "audit": {
+      "eyebrow": "Deep Dives",
+      "title": "Audit and Analysis Projects",
+      "description": "Uncovering what's silently costing businesses conversions, and delivering clear, prioritised fixes."
     }
   },
   "contact": {
