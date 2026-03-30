@@ -1,6 +1,32 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+## [2.2.0] - 2026-03-30  
+**Milestone 4 (M4) – Polishing, Legal and Testing**
+
+### Added
+- Cookie Consent component with persistent user preferences  
+- Legal pages:
+  - Privacy Policy
+  - Terms and Conditions  
+- Theme preference persistence using localStorage  
+- Language preference persistence for improved UX  
+
+### Changed
+- Improved routing setup for GitHub Pages compatibility  
+- Refined animations and transitions across components  
+- Minor UI/UX improvements for consistency and accessibility  
+- Updated navigation and footer to include legal pages  
+
+### Fixed
+- Resolved SPA routing issues on refresh (GitHub Pages compatibility)  
+- Fixed translation inconsistencies between English and Bulgarian  
+- Addressed minor layout bugs across multiple screen sizes  
+- Improved stability of theme toggle and state persistence  
+
+### Notes
+- User testing across different age groups is still pending and will be included in a future update  
+
 ## [2.1.0] - 2026-03-14  
 **Milestone 3 (M3) – Pages**
 
