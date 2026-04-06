@@ -39,7 +39,6 @@ Finished: 14/03/2026
 - [x] Fix routing bug
 - [x] Double-check translation and animations.
 - [x] Test (and fix) bugs.
-- [ ] Perform User Tests on people from different age groups.
 - [x] Deploy Initial Release.
 - [x] Theme and language storage
 - [x] Cookie Consent Component
@@ -47,4 +46,14 @@ Finished: 14/03/2026
 
 Started: 16/03/2026
 
-Finished: -
+Finished: 20/03/2026
+
+### M5 - Final Version Polish
+- [x] Responsive design fixes
+- [x] Scrollbar bug fix
+- [ ] Bulgarian documentation (?)
+- [ ] Promotional Video
+
+Started: 06/04/2026
+
+Finished: -/04/2026

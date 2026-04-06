@@ -137,7 +137,7 @@ function App() {
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Button variant="secondary" className="w-full mt-10">
+                <Button variant="secondary" className="w-full mt-10 sm:text-sm">
                   {t('home.services.consultation.action')}
                 </Button>
               </CardFooter>
@@ -156,7 +156,7 @@ function App() {
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Button variant="secondary" className="w-full mt-10">
+                <Button variant="secondary" className="w-full mt-10 sm:text-sm">
                   {t('home.services.audit.action')}
                 </Button>
               </CardFooter>
@@ -175,7 +175,7 @@ function App() {
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Button variant="secondary" className="w-full mt-10">
+                <Button variant="secondary" className="w-full mt-10 sm:text-sm">
                   {t('home.services.development.action')}
                 </Button>
               </CardFooter>

@@ -7,6 +7,7 @@ import './index.css'
 import App from './App.tsx'
 import './i18n'
 import { CookieConsent } from './components/CookieConsent.tsx'
+import { ScrollToPos } from './components/ScrollToPos.tsx'
 
 const About = lazy(() => import('./pages/About'))
 const Services = lazy(() => import("./pages/Services.tsx"))
@@ -36,6 +37,7 @@ function Root() {
       <HelmetProvider>
         <ThemeContext.Provider value={themeValue}>
           <BrowserRouter basename="/FervorWeb/">
+            <ScrollToPos />
             <CookieConsent />
             <Suspense fallback={null}>
               <Routes>
