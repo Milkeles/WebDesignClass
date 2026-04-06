@@ -32,6 +32,25 @@ This repository is a class project for Web Design, built with Tailwind CSS and o
 - About: The agency's story, approach, and values.
 - Contact: Inquiry forms and booking.
 
+### Screenshots
+#### Homepage
+| Dark Theme | Light Theme | Roadmap and Footer |
+|----------|----------|------|
+| ![](/docs/assets/home-dark.png) | ![](/docs/assets/home-light.png) | ![](/docs/assets/home-footer.png) |
+
+#### Services
+| Landing | Left Aligned Service | Right Aligned Service |
+|----------|----------|------|
+| ![](docs/assets/services-home.png) | ![](docs/assets/services-left.png) | ![](docs/assets/services-right.png) |
+#### Services
+| Values | Team |
+|----------|----------|
+| ![](docs/assets/about-values.png) | ![](docs/assets/about-team.png) |
+#### Work and Contact
+| Work Page | Contact Page |
+|----------|----------|
+| ![](docs/assets/work-page.png) | ![](docs/assets/contact-page.png) |
+
 ## Installation and Setup
 ```bash
 # Clone the repository
