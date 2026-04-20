@@ -120,6 +120,7 @@ src/
 │
 ├── components/ # Reusable UI components shared across pages
 │   └── ui/     # shadcn/ui primitives (Button, Card, Carousel, etc.)
+│   └── utils/  # Utilities
 │
 ├── context/    # React context providers (ThemeContext for dark/light mode)
 │

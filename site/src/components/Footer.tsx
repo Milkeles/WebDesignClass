@@ -2,16 +2,8 @@ import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import { Button } from '@/components/ui/Button'
 import { Logo } from '@/components/Logo'
-
-const navLinks = [
-    { label: 'nav.home', href: '/' },
-    { label: 'nav.services', href: '/services' },
-    { label: 'nav.about', href: '/about' },
-    { label: 'nav.work', href: '/work' },
-    { label: 'nav.contact', href: '/contact' },
-    { label: 'nav.documentation', href: 'https://milkeles.github.io/FervorWeb/docs/', external: true },
-]
-
+import { docsPath } from '@/components/utils/DocsPath'
+import { useMemo } from 'react'
 const legalLinks = [
     { label: 'footer.privacy', href: '/privacy' },
     { label: 'footer.terms', href: '/terms' },
@@ -23,7 +15,18 @@ const socialLinks = [
 ]
 
 export function Footer() {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
+
+    const docsUrl = docsPath(i18n.language, '')
+
+    const navLinks = useMemo(() => [
+        { label: 'nav.home', href: '/' },
+        { label: 'nav.services', href: '/services' },
+        { label: 'nav.about', href: '/about' },
+        { label: 'nav.work', href: '/work' },
+        { label: 'nav.contact', href: '/contact' },
+        { label: 'nav.documentation', href: docsUrl, external: true }
+    ], [docsUrl])
 
     return (
         <footer className="border-t border-border px-8 py-16">
@@ -92,7 +95,7 @@ export function Footer() {
                     ))}
                 </div>
             </div>
-
+            
         </footer>
     )
 }

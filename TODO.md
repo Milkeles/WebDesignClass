@@ -51,7 +51,7 @@ Finished: 20/03/2026
 ### M5 - Final Version Polish
 - [x] Responsive design fixes
 - [x] Scrollbar bug fix
-- [ ] Bulgarian documentation (?)
+- [x] Bulgarian documentation (?)
 - [ ] Promotional Video
 
 Started: 06/04/2026
