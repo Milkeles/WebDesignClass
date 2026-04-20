@@ -1,89 +1,95 @@
-# Visual Style Guide
-> Document ID: FW-VSG-01032026
->
-> Current Version: 1.1
->
-> Date: 02.03.2026
->
-> Organisation: University of Ruse "Angel Kanchev"
->
-> Department: IIT
->
-> Author(s): H. Hristov
->
-> Reviewer(s): M. Dzurov
->
-> Confidentiality: Internal
+---
+layout: default
+title: Ръководство за визуален стил
+permalink: /docs/bg/visual-style-guide/
+id: fw-vsg-01032026
+lang: bg
+---
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Color Palette](#color-palette)
-- [Typography](#typography)
-- [Components and Styling](#components-and-styling)
-- [Accessibility](#accessibility)
+# Ръководство за визуален стил
+> Идентификатор на документа: FW-VSG-01032026
+>
+> Текуща версия: 1.2
+>
+> Дата: 20.04.2026
+>
+> Организация: Русенски университет „Ангел Кънчев“
+>
+> Катедра: ИИТ
+>
+> Автор(и): Х. Христов
+>
+> Проверил(и): М. Джуров
+>
+> Ниво на поверителност: Вътрешно
+
+## Съдържание
+- [Въведение](#въведение)
+- [Цветова палитра](#цветова-палитра)
+- [Типография](#типография)
+- [Компоненти и стилизиране](#компоненти-и-стилизиране)
+- [Достъпност](#достъпност)
 
 ---
 
-## Introduction
-This style guide defines the visual standards that ensure a consistent and professional user experience across the platform.
+## Въведение
+Това ръководство за визуален стил дефинира визуалните стандарти, които осигуряват последователно и професионално потребителско изживяване в платформата.
 
-### Document Purpose
-This document establishes the visual design standards and guidelines for the website of Fervor Web.
-It serves as a reference for maintaining visual consistency across all user interface components.
-This helps to ensure that every element of the system reflects the brand identity of the company and adheres to user experience principles and standards.
+### Цел на документа
+Този документ установява визуалните стандарти и насоки за дизайна на уебсайта Fervor Web.
+Той служи като референтна точка за поддържане на визуална консистентност между всички потребителски интерфейсни компоненти.
+Това гарантира, че всеки елемент от системата отразява бранд идентичността на компанията и следва принципите на потребителското изживяване.
 
-### Document Scope
-The guidelines outlined in this document apply to all front-end interface elements of the website.
-Below, we outline the typography, color usage, UI components size and layout patterns.
-This document is intended for the designers and developers working on the website of Fervor Web.
-The visual language aims to communicate clearly the purpose of the website and ensure clients about the quality of our services, that we seek to build high performance, conversion-focused, and SEO-optimized websites, delivered quickly and reliably.
+### Обхват на документа
+Насоките в този документ се отнасят до всички фронтенд елементи на интерфейса на уебсайта.
+По-долу са описани типографията, използването на цветове, размерите на UI компонентите и моделите на оформление.
+Документът е предназначен за дизайнерите и разработчиците на уебсайта Fervor Web.
+Визуалният език има за цел ясно да комуникира предназначението на сайта и да създава доверие у клиентите, че предлагаме висококачествени, конверсионно ориентирани и SEO оптимизирани уебсайтове, доставяни бързо и надеждно.
 
-## Color Palette
-The chosen color palette seeks to communicate reliability, creativity and have sufficient contrast ratio to meet the accessibility requirements.
-![Color Palette](assets/color-scheme.png)
+## Цветова палитра
+Избраната цветова палитра има за цел да комуникира надеждност и креативност и да осигурява достатъчен контраст за покриване на изискванията за достъпност.
+![Цветова палитра](/docs/assets/color-scheme.png)
 
-## Typography
-The chosen fonts seek to be modern and reflect the brand identity, while also supporting both latin and cyrillic character set in order to adhere to the course requirements.
+## Типография
+Избраните шрифтове са модерни и отразяват бранд идентичността, като същевременно поддържат латиница и кирилица, за да отговарят на изискванията на курса.
 
-- Titles - Montserrat Alternates
-- Headings - Ubuntu
-- Normal Text - Exo 2
+- Основни заглавия - Montserrat Alternates
+- Подзаглавия - Ubuntu
+- Нормален текст - Exo 2
 
-All three fonts are modern looking and geometric, creating a feel of creativity and 
-![Material Sample](assets/material-sample.png)
+И трите шрифта са модерни и геометрични, създавайки усещане за креативност и професионализъм.
+![Примерен макет](/docs/assets/material-sample.png)
 
-## Components and Styling
-### Minimum Text Size
+## Компоненти и стилизиране
+### Минимален размер на текста
 - Headings: 32-28-24 px
 - Normal text: 18 px
 - Small text: 16 px
 
-### Text Style
-- Headings: Bold 700
-- Bold/Strong text and Buttons: Medium 500
-- Normal text: Regular 400
+### Стил на текста
+- Заглавия: Bold 700
+- Удебелен текст и бутони: Medium 500
+- Нормален текст: Regular 400
 
-### Spacing
-- Related elements: 8 px
-- Normal spacing: 16 px
-- Groups: 24 px
-- Sections: 32 px
-- Button padding: 12 24 px
-- Sections: 32 px
+### Отстояния
+- Свързани елементи: 8 px
+- Стандартно отстояние: 16 px
+- Групи: 24 px
+- Секции: 32 px
+- Падинг на бутони: 12 24 px
 
-### Shapes and colors
-Elements throughout the site should have primarily small corner radius (14-10-8px) to ensure modern looks.
-However, variety and using sharp edges and geometric shapes for style is also permitted.
+### Форми и цветове
+Елементите в сайта трябва да имат предимно малък радиус на заобляне (14–10–8px), за да се постигне модерен вид.
+В същото време е допустимо разнообразие чрез използване на остри ръбове и геометрични форми.
 
-The primary color, emerald green ``00E9B2`` is to be used for call-to-action buttons or very important elements, while other shades of green may appear throughtout to maintain the green theme of the website.
-Secondary buttons should use colors that don't clash with green, such as gray.
-As an alternative for variety, the accent color ``9B6DFF`` may also be used sparsely to highlight key elements.
+Основният цвят, изумрудено зелено ``00E9B2`` , трябва да се използва за бутони за действие или важни елементи, докато други зелени нюанси могат да се използват за поддържане на зелената тема. Вторичните бутони трябва да използват цветове, които не влизат в конфликт със зеленото, като сиво.
+Като алтернатива за разнообразие може да се използва акцентният цвят ``9B6DFF`` пестеливо за подчертаване на ключови елементи.
 
-***Note**: Small deviations from the established standards are permitted, only if consistency is maintained throughout the website. And the accessibility standards outlined below are met.*
+***Забележка**: Малки отклонения от установените стандарти са допустими, ако се запази консистентност в целия сайт и се спазват стандартите за достъпност.*
 
-## Accessibility
-Accessibility is ensured through well-chosen colors with contrast that meets the recommended according to WGAG 2.1, sufficiently large element sizes, as well as by defining standard behavior so that the system can be predictable.
-Deviations from the rules outlined above must also adhere to those contrast and size standards.
+## Достъпност
+Достъпността се осигурява чрез внимателно подбрани цветове с контраст, който отговаря на препоръките на WCAG 2.1, достатъчно големи елементи и дефинирано поведение, което прави системата предвидима.
+Отклоненията от правилата също трябва да спазват тези изисквания за контраст и размер.
 
-The website must also support keyboard navigation and contain area labels for people with disabilities and screen readers.
+Уебсайтът трябва да поддържа навигация чрез клавиатура и да съдържа ARIA етикети за хора с увреждания и screen reader-и.
 

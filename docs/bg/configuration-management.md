@@ -1,92 +1,97 @@
-# Configuration Management Plan
-> Document ID: FW-CMP-02032026
->
-> Current Version: 1.0
->
-> Date: 02.03.2026
->
-> Organisation: University of Ruse "Angel Kanchev"
->
-> Department: IIT
->
-> Author(s): H. Hristov
->
-> Reviewer(s): M. Dzurov
->
-> Confidentiality: Internal
+---
+layout: default
+title: План за управление и конфигурация
+permalink: /docs/bg/configuration-management/
+id: fw-cmp-02032026
+lang: bg
+---
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Development Strategy](#development-strategy)
-- [Change and Version Control](#change-and-version-control)
-- [Tools and Permissions](#tools-and-permissions)
+# План за управление и конфигурацията
+> Идентификатор на документа: FW-CMP-02032026
+>
+> Текуща версия: 1.1
+>
+> Дата: 20.04.2026
+>
+> Организация: Русенски университет „Ангел Кънчев“
+>
+> Катедра: ИИТ
+>
+> Автор(и): Х. Христов
+>
+> Проверил(и): М. Джуров
+>
+> Ниво на поверителност: Вътрешно
+
+## Съдържание
+- [Въведение](#introduction)
+- [Стратегия за разработка](#стратегия-за-разработка)
+- [Промени и контрол на версиите](#промени-и-контрол-на-версиите)
+- [Инструменти и права за достъп](#инструменти-и-права-за-достъп)
 
 ---
 
-## Introduction
-### Document Purpose
-This document defines the configuration management practices and development standards for the Fervor Web website. It establishes guidelines for development workflow, version control, branching strategy, and coding standards to ensure consistency and traceability throughout the project lifecycle.
-### Document Scope
-The practices outlined in this document apply to the full development lifecycle of the Fervor Web website. This document is intended for the developer working on the project and any technical reviewers assessing it. It is to be read alongside the Technical Design Document ([FW-TDD-02032026](/docs/technical-design.md)).
+## Въведение
+### Цел на документа
+Този документ дефинира практиките за управление на конфигурацията и стандартите за разработка на уебсайта Fervor Web. Той установява насоки за работния процес по разработка, контрол на версиите, стратегия за бранчване и стандарти за писане на код, за да се осигури последователност и проследимост през целия жизнен цикъл на проекта.
+### Обхват на документа
+Практиките, описани в този документ, се прилагат за целия жизнен цикъл на разработка на уебсайта Fervor Web. Документът е предназначен за разработчика, работещ по проекта, както и за всички проверяващи техническото изпълнение, които го оценяват. Следва да се чете заедно с документа за технически дизайн на системата ([FW-TDD-02032026](/docs/bg/technical-design.md)).
 
-## Development Strategy
-### Methodology
-Due to the single-developer nature of this project, no formal team development methodology (such as Scrum or Kanban) is applied.
-The Development is component-driven and carried out iteratively, with components and features implemented and refined incrementally as the project progresses.
-Components are first implemented and verified in isolation via Storybook before being composed into application pages.
+## Стратегия-за-разработка
+### Методология
+Поради факта, че проектът се разработва от един човек, не се прилага формална методология за екипна разработка (като Скръм или Канбан). Разработката е компонентно ориентирана и се извършва итеративно, като компонентите и функционалностите се имплементират и усъвършенстват итеративно с напредъка на проекта. Компонентите първо се разработват и валидират самостоятелно чрез Storybook, преди да бъдат интегрирани в страниците на приложението.
 
-### Branching Strategy
-The project follows a trunk-based development approach. The ``main`` branch serves as the single source of truth and should always remain in a stable, deployable state. Development work is carried out on short-lived branches that are merged back into ``main`` promptly upon completion.
-Branch names follow the convention ``type/short-description``, where type is one of:
-- ``feature/`` - new functionality;
-- ``fix/`` - bug fixes;
-- ``docs/`` - documentation changes;
-- ``chore/`` - maintenance tasks such as dependency updates or configuration changes;
+### Стратегия за бранчване
+Проектът следва подход за разработка, базиран на основен клон (trunk-based development). Клонът ``main`` служи като единствен източник на истина и трябва винаги да бъде в стабилно и готово за внедряване състояние. Разработката се извършва в краткотрайни клонове, които се сливат обратно към ``main`` веднага след завършване.
+Имената на клоновете следват конвенцията ``type/short-description``, където type е едно от:
+- ``feature/`` - нова функционалност;
+- ``fix/`` - поправки на грешки;
+- ``docs/`` - промени в документацията;
+- ``chore/`` - поддръжка като обновяване на зависимости или промени в конфигурацията;
 
-### Coding Standards
-#### Naming Conventions
-- Components - PascalCase (e.g. HeroSection.tsx)
-- Hooks - camelCase prefixed with use (e.g. useScrollPosition.ts)
-- Utilities and helpers - camelCase (e.g. formatDate.ts)
-- Constants - SCREAMING_SNAKE_CASE (e.g. MAX_RETRIES)
-- CSS classes - Tailwind utility classes only; no custom class names unless strictly necessary
-#### File and Folder Naming
-All files and folders use **kebab-case**, with the exception of component files and pages which use PascalCase to match their exported component name.
-Folders group files by type (e.g. components/, pages/), consistent with the project structure defined in the Technical Design Document.
-#### Comment Style
-- Comments should explain why, not what - the code itself should be self-explanatory.
-- JSDoc-style comments (``/** */``) are used for functions and component props where the purpose or parameters are not immediately obvious.
-- Inline comments (``//``) are used sparingly, only where a specific decision or workaround requires clarification.
-- Translation keys should include a brief comment in the locale JSON files where the context of a string may be ambiguous.
+### Стандарти за писане на код
+#### Конвенция за именуване
+- Компоненти - PascalCase (e.g. HeroSection.tsx);
+- Куки - camelCase prefixed with use (e.g. useScrollPosition.ts);
+- Помощни функции - camelCase (e.g. formatDate.ts);
+- Константи - SCREAMING_SNAKE_CASE (e.g. MAX_RETRIES);
+- CSS класове - само Tailwind utility класове; без персонализирани имена, освен при крайна необходимост;
+#### Именуване на файлове и папки
+Всички файлове и папки използват **kebab-case**, с изключение на файловете за компоненти и страници, които използват PascalCase, за да съответстват на името на експортирания компонент. Папките групират файловете по тип (напр. components/, pages/), съгласно структурата на проекта, дефинирана в документа за технически дизайн на системата ([FW-TDD-02032026](/docs/bg/technical-design.md)).
+#### Стил на коментари
+- Коментарите трябва да обясняват „защо“, а не „какво“ – кодът сам по себе си трябва да бъде ясен!
+- JSDoc-style коментари (``/** */``) се използват за функции и свойства на компоненти, когато предназначението или параметрите не са очевидни.
+- Вътрешни коментари (``//``) се използват пестеливо, само когато е необходимо да се поясни конкретно решение или алтернатива.
+- Ключовете за превод трябва да съдържат кратък коментар в JSON файловете за локализация, когато контекстът е неясен.
 
-## Change and Version Control
-### Commit Convention
-Commits follow a standard label prefix to keep the history readable and traceable:
-- ``feat:`` - a new feature
-- ``fix:`` - a bug fix
-- ``docs:`` - documentation changes only
-- ``chore:`` - maintenance, tooling, or dependency changes
-- ``style:`` - formatting or visual changes that do not affect functionality
-- ``refactor:`` - code changes that neither fix a bug nor add a feature
-Commit messages should be written in the imperative mood and kept concise.
+## Промени и контрол на версиите
+### Конвенция за commit съобщения
+Commit съобщенията следват стандартен префикс за по-добра четимост и проследимост:
+- ``feat:`` - нова функционалност;
+- ``fix:`` - поправка на грешка;
+- ``docs:`` - само промени в документацията;
+- ``chore:`` - поддръжка, инструменти или зависимости;
+- ``style:`` - форматиране или визуални промени без влияние върху функционалността;
+- ``refactor:`` - промени в кода, които нито поправят грешка, нито добавят функционалност;
+Съобщенията трябва да бъдат в повелително наклонение и кратки.
 
-### Versioning
-The project follows Semantic Versioning (SemVer): ``MAJOR.MINOR.PATCH``
-- MAJOR - breaking changes or significant milestone releases
-- MINOR - new features or pages added
-- PATCH - bug fixes, copy changes, or minor visual corrections
+### Версии
+Проектът следва Семантично версиониране (SemVer): ``MAJOR.MINOR.PATCH``
+- MAJOR - големи промени или значими версии;
+- MINOR - добавяне на нови функционалности или страници;
+- PATCH - поправки на грешки, текстови промени или малки визуални корекции;
 
-### Change Tracking
-All changes are tracked through Git commit history on GitHub. Each merge into ``main`` represents a stable checkpoint in the project's development.
+### Проследяване на промените
+Всички промени се проследяват чрез историята на commit-ите в GitHub. Всяко сливане към ``main`` представлява стабилен етап от развитието на проекта.
 
-## Tools and Permissions
-### Tools
-- Git - Version control
-- GitHub - Remote repository and wiki hosting
-- Vite - Development server and production build
-- npm - Dependency management
-- Jekyll - Project wiki, hosted via GitHub Pages
-- Storybook - Used for isolated component development and visual validation.
+## Инструменти и права за достъп
+### Инструменти
+- Git - контрол на версиите;
+- GitHub - отдалечено хранилище и хостване;
+- Vite - сървър за разработка и билдване за експлоатация;
+- npm - управление на зависимости;
+- Jekyll - проектна уикипедия(документация), хоствана чрез Github Pages.
+- Storybook - използва се за изолирана разработка и визуална валидация на компоненти
 
-### Permissions
-The repository is publicly accessible on GitHub and open source, as is the GitHub Pages wiki.
+### Права за достъп
+Хранилището и проектната уикипедия са публично достъпни в GitHub и с отворен код.

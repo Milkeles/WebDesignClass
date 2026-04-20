@@ -1,9 +1,17 @@
+---
+layout: default
+title: Technical Design Document
+permalink: /docs/technical-design/
+id: fw-tdd-02032026
+lang: en
+---
+
 # Technical Design Document
 > Document ID: FW-TDD-02032026
 >
-> Current Version: 1.0
+> Current Version: 1.1
 >
-> Date: 02.03.2026
+> Date: 20.04.2026
 >
 > Organisation: University of Ruse "Angel Kanchev"
 >
@@ -73,16 +81,16 @@ The Fervor Web website is built as a modern multi-page application, leveraging a
 - **Node.js / npm** - Used as the JavaScript runtime and package manager for managing front-end dependencies, running the Vite dev server, and executing the production build pipeline.
 
 ## Dependencies
-- react (^19.0.0) - Core UI framework
-- react-dom (^19.0.0) - React DOM renderer
-- react-router-dom (^7.0.0) - Client-side routing and multi-page navigation
-- react-i18next (^15.0.0) - Internationalization and multi-language support
-- i18next (^24.0.0) - i18n core engine, required by react-i18next
-- typescript (^5.0.0) - Static type checking
-- vite (^6.0.0) - Build tool and development server
-- @vitejs/plugin-react-swc (^3.0.0) - SWC-based React plugin for Vite
-- tailwindcss (^4.0.0) - Utility-first CSS framework
-- shadcn/ui (latest) - Accessible, unstyled component primitives
+- react (^19.0.0) - Core UI framework;
+- react-dom (^19.0.0) - React DOM renderer;
+- react-router-dom (^7.0.0) - Client-side routing and multi-page navigation;
+- react-i18next (^15.0.0) - Internationalization and multi-language support;
+- i18next (^24.0.0) - i18n core engine, required by react-i18next;
+- typescript (^5.0.0) - Static type checking;
+- vite (^6.0.0) - Build tool and development server;
+- @vitejs/plugin-react-swc (^3.0.0) - SWC-based React plugin for Vite;
+- tailwindcss (^4.0.0) - Utility-first CSS framework;
+- shadcn/ui (latest) - Accessible, unstyled component primitives;
 
 
 ## Project Structure
@@ -92,6 +100,7 @@ The Fervor Web website is built as a modern multi-page application, leveraging a
 .
 ├── docs/       # Project documentation 
 │   └── assets/ # Images and assets used in documentation
+│   └── bg/     # Translation of the documentation, needed for the class
 └── site/       # The React(Vite) application
 ```
 

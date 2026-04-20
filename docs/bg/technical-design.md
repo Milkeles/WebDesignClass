@@ -1,125 +1,132 @@
-# Technical Design Document
-> Document ID: FW-TDD-02032026
->
-> Current Version: 1.0
->
-> Date: 02.03.2026
->
-> Organisation: University of Ruse "Angel Kanchev"
->
-> Department: IIT
->
-> Author(s): H. Hristov
->
-> Reviewer(s): M. Dzurov
->
-> Confidentiality: Internal
-
-## Table of Contents
-- [Introduction](#introduction)
-- [Architectural Representation](#architectural-representation)
-- [Technology Stack](#technology-stack)
-- [Dependencies](#dependencies)
-- [Project Structure](#project-structure)
+---
+layout: default
+title: Документ за технически дизайн
+permalink: /docs/bg/technical-design/
+id: fw-tdd-02032026
+lang: bg
 ---
 
-## Introduction
-### Document Purpose
-This document defines the technical design and architectural decisions underlying the Fervor Web website. It serves as a comprehensive reference for the system's structure, technology choices, and component dependencies.
-This document aims to provide readers with a clear understanding of how the system is built, what technologies power it, and how its components interact.
+# Technical Design Document
+> Идентификатор на документа: FW-TDD-02032026
+>
+> Текуща версия: 1.1
+>
+> Дата: 20.04.2026
+>
+> Организация: Русенски университет „Ангел Кънчев“
+>
+> Катедра: ИИТ
+>
+> Автор(и): Х. Христов
+>
+> Проверил(и): М. Джуров
+>
+> Ниво на поверителност: Вътрешно
 
-### Document Scope
-The guidelines and specifications outlined in this document apply to the full technical implementation of the Fervor Web website. This includes the front-end architecture, the selected technology stack, and all external libraries and dependencies the project relies upon.
-This document is intended for the developers and technical reviewers working on the project. It is to be read alongside the Visual Style Guide ([FW-VSG-01032026](/docs/visual-style-guide.md)), which governs the visual and UX standards that this technical implementation must uphold.
+## Съдържание
+- [Въведение](#въведение)
+- [Архитектурно представяне](#архитектурно-представяне)
+- [Технологичен стек](#технологичен-стек)
+- [Зависимости](#зависимости)
+- [Структура на проекта](#структура-на-проекта)
+---
 
-### Relationship to Other Documents
-This Technical Design Document complements the Visual Style Guide by providing the technical foundation needed to realize the defined design standards. Decisions regarding component structure, styling approach, and library selection have been made with the requirements of the Visual Style Guide in mind, particularly with respect to typography, color usage, accessibility, and responsive layout.
+## Въведение
+### Цел на документа
+Този документ дефинира техническия дизайн и архитектурните решения, върху които е изграден уебсайтът Fervor Web. Той служи като изчерпателна референтна точка за структурата на системата, технологичния избор и зависимостите на компонентите.
+Целта му е да предостави ясно разбиране за това как е изградена системата, какви технологии я захранват и как взаимодействат нейните компоненти.
 
-## Architectural Representation
-The Fervor Web website follows a client-side multi-page architecture, built entirely on the front end with no backend or server-side rendering involved. All pages are rendered in the browser via React, with React Router managing navigation between them.
+### Обхват на документа
+Указанията и спецификациите в този документ се отнасят до цялостната техническа реализация на уебсайта Fervor Web. Това включва фронтенд архитектурата, избрания технологичен стек и всички външни библиотеки и зависимости, на които проектът разчита. Документът е предназначен за разработчици и проверяващите техническото изпълнение. Той трябва да се чете заедно с документа за визуален стил ([FW-VSG-01032026](/docs/bg/visual-style-guide.md)), който определя визуалните и UX стандартите, които тази техническа реализация трябва да следва.
 
-### Component Stucture
-The UI is organized into a hierarchy of reusable React components, following a standard separation of concerns:
-- **Pages** - Top-level components, one per route, responsible for overall page layout and composition.
-- **Components** - Reusable UI elements shared across pages, built with shadcn/ui primitives and styled via Tailwind to conform to the VSG.
-- **Layouts** - Structural wrappers that define shared elements across pages, such as the navigation bar and footer.
+### Връзка с други документи
+Този документ за технически дизайн на системата допълва документа за визуален стил, като предоставя техническата основа за реализиране на дефинираните дизайнерски стандарти. Решенията относно структурата на компонентите, подхода за стилизиране и избора на библиотеки са направени с оглед на изискванията на визуалния стил, особено по отношение на типография, цветове, достъпност и адаптивен дизайн.
 
-### Internationalisation
-Language switching is managed entirely on the client side via react-i18next. Translation strings are stored in static JSON resource files, one per supported language, and are loaded at runtime. No server requests are made for language changes.
+## Архитектурно представяне
+Уебсайтът Fervor Web следва клиентска многостранична архитектура, изградена изцяло на фронтенд ниво, без бекенд или сървърно рендериране. Всички страници се рендерират в браузъра чрез React, като навигацията между тях се управлява от React Router.
 
-### Wiki
-The project wiki is architecturally separate from the main application. It is a static site generated by Jekyll and hosted on GitHub Pages under a separate subdomain, sharing no code or build pipeline with the React application.
+### Структура на компонентите
+Потребителският интерфейс е организиран в йерархия от преизползваеми React компоненти, следвайки стандартно разделение на отговорностите:
+- **Страници** - компоненти от най-високо ниво, по един за всеки маршрут, отговарящи за цялостното оформление и композиция на страницата.
+- **Компоненти** - преизползваеми елементи, използвани между страниците, изградени с shadcn/ui и стилизирани чрез Tailwind според визуалния стил.
+- **Оформления** - структурни обвивки, които дефинират общи елементи между страниците, като навигация и футър.
 
-## Technology Stack
-The Fervor Web website is built as a modern multi-page application, leveraging a component-based front-end architecture. The stack has been selected to prioritize development speed, visual consistency, and alignment with the standards defined in the Visual Style Guide.
+### Интернационализация
+Превключването на езика се управлява изцяло от клиента чрез react-i18next. Преводите се съхраняват в статични JSON файлове, по един за всеки поддържан език, и се зареждат по време на изпълнение. Не се извършват сървърни заявки при смяна на езика.
 
-### Front End
-- **React 19 (via Vite)** - The core UI framework. React's component model enables modular, reusable interface elements that map naturally onto the design system defined in the VSG. Vite serves as the build tool and development server, providing near-instant Hot Module Replacement and optimized production builds via the SWC-based compiler.
-- **TypeScript** - The project is written entirely in TypeScript, providing static type checking across all components, hooks, and utilities. This reduces runtime errors and improves maintainability and developer experience, particularly as the codebase scales across multiple pages and language configurations.
-- **Tailwind CSS** - Utility-first CSS framework used for layout, spacing, and responsive design. Tailwind's configuration is used to encode the design tokens from the VSG.
+### Уикипедия
+Проектното уики е архитектурно отделено от основното приложение. То представлява статичен сайт, генериран чрез Jekyll и хостван чрез GitHub Pages на отделен поддомен, без споделен код или билд процес с React приложението.
+
+## Технологичен стек
+Уебсайтът Fervor Web е изграден като модерно приложение с много страници, използващо компонентно-базирана фронтенд архитектура. Стекът е подбран с цел бърза разработка, визуална консистентност и съответствие с визуалния стил.
+
+### Фронтенд
+- **React 19 (via Vite)** - основна UI библиотека. Компонентният модел на React позволява модулни и преизползваеми интерфейсни елементи. Vite осигурява бързо презареждане при промени и оптимизирани билдове.
+- **TypeScript** - използва се навсякъде в проекта за статична типизация, което намалява грешките и подобрява поддръжката.
+- **Tailwind CSS** - utility-first CSS фреймуърк, използван за layout, spacing и responsive дизайн. shadcn/ui – библиотека от компоненти върху Radix UI, използвана за интерактивни елементи като диалози, dropdown-и и форми.
 - **shadcn/ui** - Component library built on top of Radix UI primitives, used for interactive UI elements such as dialogs, dropdowns, and form controls. Components are unstyled by default and customized via Tailwind to conform to the VSG.
-- **HTML5** - Semantic HTML5 markup is used throughout, supporting both accessibility requirements and SEO optimization.
+- **HTML5** - семантичен HTML5 за достъпност и SEO.
 
-### Component Development and Testing
-- **Storybook** - Used to build, test, and visually validate UI components in isolation.
+### Разработка и тестване на компоненти
+- **Storybook** - използва се за изолирана разработка, тестване и визуална валидация на UI компоненти.
 
-### Documentation and Wiki
-- **Jekyll (GitHub Pages)** - A static site generator used to host the project wiki. It is deployed separately via GitHub Pages and is not part of the root application. Jekyll's Markdown-based authoring and GitHub-native integration make it well-suited for maintaining living documentation alongside the codebase.
+### Документация и уики
+- **Jekyll (GitHub Pages)** - статичен генератор на сайтове за уики документацията, хостван отделно от приложението.
 
-### Version Control
-- **Git & Github** - Source control and collaboration are managed through GitHub. The repository also hosts the Jekyll wiki as a GitHub Pages site, keeping documentation co-located with the source code.
+### Контрол на версиите
+- **Git & Github** - управление на кода и хостване на хранилището и уики.
 
-### Runtime Environment
-- **Node.js / npm** - Used as the JavaScript runtime and package manager for managing front-end dependencies, running the Vite dev server, and executing the production build pipeline.
+### Среда за изпълнение
+- **Node.js / npm** - runtime и пакетен мениджър за разработка и билд процесите.
 
-## Dependencies
-- react (^19.0.0) - Core UI framework
-- react-dom (^19.0.0) - React DOM renderer
-- react-router-dom (^7.0.0) - Client-side routing and multi-page navigation
-- react-i18next (^15.0.0) - Internationalization and multi-language support
-- i18next (^24.0.0) - i18n core engine, required by react-i18next
-- typescript (^5.0.0) - Static type checking
-- vite (^6.0.0) - Build tool and development server
-- @vitejs/plugin-react-swc (^3.0.0) - SWC-based React plugin for Vite
-- tailwindcss (^4.0.0) - Utility-first CSS framework
-- shadcn/ui (latest) - Accessible, unstyled component primitives
+## Зависимости
+- react (^19.0.0) - Основна UI библиотека;
+- react-dom (^19.0.0) - React DOM renderer;
+- react-router-dom (^7.0.0) - клиентска навигация
+- react-i18next (^15.0.0) - интернационализация и поддържане на множество езици;
+- i18next (^24.0.0) - i18n ядро, нужно за react-i18next;
+- typescript (^5.0.0) - статична типизация;
+- vite (^6.0.0) - интрумент за изграждане на проекта и сървър;
+- @vitejs/plugin-react-swc (^3.0.0) - SWC-базирана добавка към React за Vite;
+- tailwindcss (^4.0.0) - CSS фреймуърк;
+- shadcn/ui (latest) - достъпни, нестилизирани компоненти и примитиви;
 
-
-## Project Structure
+## Структура на проекта
 
 ### Root
 ```
 .
-├── docs/       # Project documentation 
-│   └── assets/ # Images and assets used in documentation
-└── site/       # The React(Vite) application
+├── docs/       # Проектна документация 
+│   └── assets/ # Изображения и ресурси за документацията
+│   └── bg/     # Превод на документацията, изискван по дисциплината
+└── site/       # React(Vite) приложението
 ```
 
 ### Site
 ```
 site/
-├── public/     # Static files copied as-is to dist (404.html, favicon, etc.)
-└── src/        # Application source code
+├── public/     # Статични файлове (404, favicon и др.)
+└── src/        # Изходен код на приложението
 ```
 
 ### Source (`site/src/`)
 ```
 src/
-├── assets/     # Images and assets used in the application
-│   ├── fonts/  # Self-hosted WOFF2 font files (Montserrat Alternates, Ubuntu, Exo 2)
-│   └── icons/  # Custom SVG icons imported as React components via vite-plugin-svgr
+├── assets/     # Изображения и ресурси
+│   ├── fonts/  # WOFF2 шрифтове (Montserrat Alternates, Ubuntu, Exo 2)
+│   └── icons/  # SVG икони, импортиращи се като и към React компоненти
 │
-├── components/ # Reusable UI components shared across pages
-│   └── ui/     # shadcn/ui primitives (Button, Card, Carousel, etc.)
+├── components/ # Преизползваеми UI компоненти
+│   └── ui/     # shadcn/ui компоненти и примитиви 
 │
-├── context/    # React context providers (ThemeContext for dark/light mode)
+├── context/    # React контексти (ThemeContext за тъмен/светъл режим)
 │
-├── lib/        # Utility modules (cookie helpers, etc.)
+├── lib/        # Помощни модули
 │
-├── locales/    # Translation JSONs for available languages
+├── locales/    # JSON файлове за превод
 │   └── ...
 │
-├── pages/      # Page-level components (About, Services, Work, Contact)
+├── pages/      # Компоненти от най-високо ниво за страници (За нас, услуги, проекти, контакти)
 │
-└── stories/    # Storybook stories for component development and documentation
+└── stories/    # Storybook истории за разработка и документация на компоненти
 ```

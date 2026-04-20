@@ -23,7 +23,7 @@ permalink: /docs/
 ## Introduction
 Fervor Web is a conceptual website for a small boutique web agency specializing in high-performance websites for small businesses. We build customer-centric websites focused on high performance, conversion rate, and SEO, all delivered quickly and maintained affordably through a straightforward subscription model.
 
-This repository is a class project for Web Design, built with Tailwind CSS and original photography.
+This repository is a class project for Web Design, built with TypeScript, React, shadcn, and Tailwind CSS and original photography.
 
 ## Pages
 - Home: Hero section, value proposition, and call to action.

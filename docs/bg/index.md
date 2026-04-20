@@ -11,70 +11,71 @@ permalink: /docs/bg/
 [![Pull Requests](https://img.shields.io/github/issues-pr/Milkeles/FervorWeb)](https://github.com/Milkeles/FervorWeb/pulls)
 [![Version](https://img.shields.io/github/v/tag/Milkeles/FervorWeb?label=version)](https://github.com/Milkeles/FervorWeb/releases/latest)
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Pages](#pages)
-- [Installation and Setup](#installation-and-setup)
-- [Documentation References](#documentation-references)
-- [License](#license)
+## Съдържание
+- [Въведение](#въведение)
+- [Страници](#страници)
+- [Инсталация и настройка](#инсталация-и-настройка)
+- [Препратки към доцументация](#препратки-към-документация)
+- [Лиценз](#лиценз)
 
 ---
 
-## Introduction
-Изпробване на бг документация
-Fervor Web is a conceptual website for a small boutique web agency specializing in high-performance websites for small businesses. We build customer-centric websites focused on high performance, conversion rate, and SEO, all delivered quickly and maintained affordably through a straightforward subscription model.
+## Въведение
+Fervor Web е концептуален уебсайт за малка бутикова уеб агенция, специализирана в разработката на високопроизводителни сайтове за малки бизнеси. Ние разработваме 
+сайтове, изградени около нуждите на потребителя, с фокус към производителността, конверсиите и оптимизацията за търскачки (SEO), доставени бързо и поддържани на достъпни цени чрез лесен за разбиране абонаментен модел.
 
-This repository is a class project for Web Design, built with Tailwind CSS and original photography.
+Това хранилище е учебен проект по дисциплината "Уеб дизайн и проектиране на МТ", изграден с TypeScript, React(Vite), shadcn и Tailwind CSS и съдържащ авторска фотография. 
 
-## Pages
-- Home: Hero section, value proposition, and call to action.
-- Services: Description and subscription model.
-- Work: Portfolio of example projects and case studies.
-- About: The agency's story, approach, and values.
-- Contact: Inquiry forms and booking.
+## Страници
+- Начална страница: Hero секция, мото и призив за действие
+- Услуги: Описание и абонаментен модел
+- Проекти: Портфолио с примерни проекти и казуси
+- За нас: Историята на агенцията, подходът и ценностите
+- Контакти: Форми за запитвания и записване
 
-### Screenshots
-#### Homepage
-| Dark Theme | Light Theme | Roadmap and Footer |
+### Снимки
+#### Начална страница
+| Тъмна тема | Светла тема | Процесна карта и футър |
 |----------|----------|------|
 | ![](/docs/assets/home-dark.png) | ![](/docs/assets/home-light.png) | ![](/docs/assets/home-footer.png) |
 
-#### Services
-| Landing | Left Aligned Service | Right Aligned Service |
+#### Услуги
+| Hero секция | Услуга с подравняване вляво | Услуга с подравняване вдясно |
 |----------|----------|------|
-| ![](docs/assets/services-home.png) | ![](docs/assets/services-left.png) | ![](docs/assets/services-right.png) |
-#### Services
-| Values | Team |
+| ![](/docs/assets/services-home.png) | ![](/docs/assets/services-left.png) | ![](/docs/assets/services-right.png) |
+#### За нас
+| Ценности | Екип |
 |----------|----------|
-| ![](docs/assets/about-values.png) | ![](docs/assets/about-team.png) |
-#### Work and Contact
-| Work Page | Contact Page |
+| ![](/docs/assets/about-values.png) | ![](/docs/assets/about-team.png) |
+#### Проекти и контакти
+| Портфолио с проекти | Страница за връзка |
 |----------|----------|
-| ![](docs/assets/work-page.png) | ![](docs/assets/contact-page.png) |
+| ![](/docs/assets/work-page.png) | ![](/docs/assets/contact-page.png) |
 
-## Installation and Setup
+## Инсталация и настройка
 ```bash
-# Clone the repository
+# Клониране на хранилището
 git clone https://github.com/Milkeles/FervorWeb.git
 cd FervorWeb
 
-# Install dependencies
+# Инсталиране на зависимости
 npm install
 
-# Start the development server
+# Стартиране на сървъра за разработка
 npm run dev
 
-# Start Storybook (component documentation)
+# Стартиране на Storybook (Документация на компоненти)
 npm run storybook
 ```
 
-## Documentation References
-- [Visual Style Guide](docs/visual-style-guide.md)
-- [Technical Design Document](docs/technical-design.md)
-- [Configuration Management Plan](docs/configuration-management.md)
-- Component Library (Storybook) – run locally with `npm run storybook`
+## Препратки към документация
+- [Ръководство за визуален стил](docs/bg/visual-style-guide.md)
+- [Документ за технически дизайн](docs/bg/technical-design.md)
+- [План за управление и конфигурация](docs/bg/configuration-management.md)
+- Компонентна библиотека (Storybook) – изпълнява се локално чрез `npm run storybook`
 
-*Note: Some documents typically found in a full-stack project are intentionally excluded due to the frontend-focused nature of the project, while others not usually versioned in a repository are included for class purposes.*
+*Забележка: Някои технически документи, които се срещат в пълни проекти, са умишлено изключени, поради фокуса на проекта върху фронт-енд дизайна. Докато други, за които не е присъщо да се съхраняват в хранилището като docs-as-code тип документация са включени за целите на дисциплината.*
 
-## License
-[MIT](/LICENSE)
+
+## Лиценз
+[MIT](../../LICENSE)

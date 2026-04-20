@@ -1,9 +1,17 @@
+---
+layout: default
+title: Configuration Management Plan
+permalink: /docs/configuration-management/
+id: fw-cmp-02032026
+lang: en
+---
+
 # Configuration Management Plan
 > Document ID: FW-CMP-02032026
 >
-> Current Version: 1.0
+> Current Version: 1.1
 >
-> Date: 02.03.2026
+> Date: 20.04.2026
 >
 > Organisation: University of Ruse "Angel Kanchev"
 >
@@ -45,11 +53,11 @@ Branch names follow the convention ``type/short-description``, where type is one
 
 ### Coding Standards
 #### Naming Conventions
-- Components - PascalCase (e.g. HeroSection.tsx)
-- Hooks - camelCase prefixed with use (e.g. useScrollPosition.ts)
-- Utilities and helpers - camelCase (e.g. formatDate.ts)
-- Constants - SCREAMING_SNAKE_CASE (e.g. MAX_RETRIES)
-- CSS classes - Tailwind utility classes only; no custom class names unless strictly necessary
+- Components - PascalCase (e.g. HeroSection.tsx);
+- Hooks - camelCase prefixed with use (e.g. useScrollPosition.ts);
+- Utilities and helpers - camelCase (e.g. formatDate.ts);
+- Constants - SCREAMING_SNAKE_CASE (e.g. MAX_RETRIES);
+- CSS classes - Tailwind utility classes only; no custom class names unless strictly necessary;
 #### File and Folder Naming
 All files and folders use **kebab-case**, with the exception of component files and pages which use PascalCase to match their exported component name.
 Folders group files by type (e.g. components/, pages/), consistent with the project structure defined in the Technical Design Document.
@@ -62,31 +70,31 @@ Folders group files by type (e.g. components/, pages/), consistent with the proj
 ## Change and Version Control
 ### Commit Convention
 Commits follow a standard label prefix to keep the history readable and traceable:
-- ``feat:`` - a new feature
-- ``fix:`` - a bug fix
-- ``docs:`` - documentation changes only
-- ``chore:`` - maintenance, tooling, or dependency changes
-- ``style:`` - formatting or visual changes that do not affect functionality
-- ``refactor:`` - code changes that neither fix a bug nor add a feature
+- ``feat:`` - a new feature;
+- ``fix:`` - a bug fix;
+- ``docs:`` - documentation changes only;
+- ``chore:`` - maintenance, tooling, or dependency changes;
+- ``style:`` - formatting or visual changes that do not affect functionality;
+- ``refactor:`` - code changes that neither fix a bug nor add a feature;
 Commit messages should be written in the imperative mood and kept concise.
 
 ### Versioning
 The project follows Semantic Versioning (SemVer): ``MAJOR.MINOR.PATCH``
-- MAJOR - breaking changes or significant milestone releases
-- MINOR - new features or pages added
-- PATCH - bug fixes, copy changes, or minor visual corrections
+- MAJOR - breaking changes or significant milestone releases;
+- MINOR - new features or pages added;
+- PATCH - bug fixes, copy changes, or minor visual corrections;
 
 ### Change Tracking
 All changes are tracked through Git commit history on GitHub. Each merge into ``main`` represents a stable checkpoint in the project's development.
 
 ## Tools and Permissions
 ### Tools
-- Git - Version control
-- GitHub - Remote repository and wiki hosting
-- Vite - Development server and production build
-- npm - Dependency management
-- Jekyll - Project wiki, hosted via GitHub Pages
-- Storybook - Used for isolated component development and visual validation.
+- Git - version control;
+- GitHub - remote repository and hosting;
+- Vite - development server and production build;
+- npm - dependency management;
+- Jekyll - project wiki, hosted via GitHub Pages;
+- Storybook - used for isolated component development and visual validation;
 
 ### Permissions
 The repository is publicly accessible on GitHub and open source, as is the GitHub Pages wiki.

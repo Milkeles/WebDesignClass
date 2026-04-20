@@ -1,9 +1,17 @@
+---
+layout: default
+title: Visual Style Guide
+permalink: /docs/technical-design/
+id: fw-vsg-01032026
+lang: en
+---
+
 # Visual Style Guide
 > Document ID: FW-VSG-01032026
 >
-> Current Version: 1.1
+> Current Version: 1.2
 >
-> Date: 02.03.2026
+> Date: 20.04.2026
 >
 > Organisation: University of Ruse "Angel Kanchev"
 >
@@ -49,7 +57,7 @@ The chosen fonts seek to be modern and reflect the brand identity, while also su
 - Headings - Ubuntu
 - Normal Text - Exo 2
 
-All three fonts are modern looking and geometric, creating a feel of creativity and 
+All three fonts are modern looking and geometric, creating a feel of creativity and professionalism.
 ![Material Sample](assets/material-sample.png)
 
 ## Components and Styling
@@ -69,7 +77,6 @@ All three fonts are modern looking and geometric, creating a feel of creativity 
 - Groups: 24 px
 - Sections: 32 px
 - Button padding: 12 24 px
-- Sections: 32 px
 
 ### Shapes and colors
 Elements throughout the site should have primarily small corner radius (14-10-8px) to ensure modern looks.
