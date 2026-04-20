@@ -1,8 +1,9 @@
-const DOCS_BASE = 'https://milkeles.github.io/FervorWeb/' // or wherever Jekyll lives
+const DOCS_BASE = 'https://milkeles.github.io/FervorWeb'
 
 export const docsPath = (locale: string, slug = ''): string => {
-    const cleanSlug = slug.replace(/^\/+/, '')
-    return locale === 'en'
-        ? `${DOCS_BASE}/${cleanSlug}`
-        : `${DOCS_BASE}/${locale}/${cleanSlug}`
+    const cleanSlug = slug.replace(/^\/+/, '').replace(/\/+$/, '')
+    const path = locale === 'en'
+        ? cleanSlug
+        : `${locale}/${cleanSlug}`
+    return path ? `${DOCS_BASE}/${path}/` : `${DOCS_BASE}/`
 }

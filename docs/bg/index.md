@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Documentation
+title: Документация
+description: Фронтенд уебсайт за дисциплината УебДизайн, разработен с TypeScript, React и Tailwind CSS.
 permalink: /docs/bg/
 ---
 
@@ -69,9 +70,9 @@ npm run storybook
 ```
 
 ## Препратки към документация
-- [Ръководство за визуален стил](docs/bg/visual-style-guide.md)
-- [Документ за технически дизайн](docs/bg/technical-design.md)
-- [План за управление и конфигурация](docs/bg/configuration-management.md)
+- [Ръководство за визуален стил](/docs/bg/visual-style-guide.md)
+- [Документ за технически дизайн](/docs/bg/technical-design.md)
+- [План за управление и конфигурация](/docs/bg/configuration-management.md)
 - Компонентна библиотека (Storybook) – изпълнява се локално чрез `npm run storybook`
 
 *Забележка: Някои технически документи, които се срещат в пълни проекти, са умишлено изключени, поради фокуса на проекта върху фронт-енд дизайна. Докато други, за които не е присъщо да се съхраняват в хранилището като docs-as-code тип документация са включени за целите на дисциплината.*
