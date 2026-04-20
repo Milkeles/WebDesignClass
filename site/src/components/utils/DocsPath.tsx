@@ -1,4 +1,4 @@
-const DOCS_BASE = 'https://milkeles.github.io/FervorWeb'
+const DOCS_BASE = 'https://milkeles.github.io/FervorWeb/docs'
 
 export const docsPath = (locale: string, slug = ''): string => {
     const cleanSlug = slug.replace(/^\/+/, '').replace(/\/+$/, '')
