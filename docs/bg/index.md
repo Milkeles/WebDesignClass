@@ -38,20 +38,20 @@ Fervor Web е концептуален уебсайт за малка бутик
 #### Начална страница
 | Тъмна тема | Светла тема | Процесна карта и футър |
 |----------|----------|------|
-| ![](/docs/assets/home-dark.png) | ![](/docs/assets/home-light.png) | ![](/docs/assets/home-footer.png) |
+| ![](/FervorWeb/docs/assets/home-dark.png) | ![](/FervorWeb/docs/assets/home-light.png) | ![](/FervorWeb/docs/assets/home-footer.png) |
 
 #### Услуги
 | Hero секция | Услуга с подравняване вляво | Услуга с подравняване вдясно |
 |----------|----------|------|
-| ![](/docs/assets/services-home.png) | ![](/docs/assets/services-left.png) | ![](/docs/assets/services-right.png) |
+| ![](/FervorWeb/docs/assets/services-home.png) | ![](/FervorWeb/docs/assets/services-left.png) | ![](/FervorWeb/docs/assets/services-right.png) |
 #### За нас
 | Ценности | Екип |
 |----------|----------|
-| ![](/docs/assets/about-values.png) | ![](/docs/assets/about-team.png) |
+| ![](/FervorWeb/docs/assets/about-values.png) | ![](/FervorWeb/docs/assets/about-team.png) |
 #### Проекти и контакти
 | Портфолио с проекти | Страница за връзка |
 |----------|----------|
-| ![](/docs/assets/work-page.png) | ![](/docs/assets/contact-page.png) |
+| ![](/FervorWeb/docs/assets/work-page.png) | ![](/FervorWeb/docs/assets/contact-page.png) |
 
 ## Инсталация и настройка
 ```bash
@@ -70,9 +70,9 @@ npm run storybook
 ```
 
 ## Препратки към документация
-- [Ръководство за визуален стил](/docs/bg/visual-style-guide.md)
-- [Документ за технически дизайн](/docs/bg/technical-design.md)
-- [План за управление и конфигурация](/docs/bg/configuration-management.md)
+- [Ръководство за визуален стил](/FervorWeb/docs/bg/visual-style-guide.md)
+- [Документ за технически дизайн](/FervorWeb/docs/bg/technical-design.md)
+- [План за управление и конфигурация](/FervorWeb/docs/bg/configuration-management.md)
 - Компонентна библиотека (Storybook) – изпълнява се локално чрез `npm run storybook`
 
 *Забележка: Някои технически документи, които се срещат в пълни проекти, са умишлено изключени, поради фокуса на проекта върху фронт-енд дизайна. Докато други, за които не е присъщо да се съхраняват в хранилището като docs-as-code тип документация са включени за целите на дисциплината.*

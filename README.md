@@ -42,7 +42,7 @@ This repository is a class project for Web Design, built with TypeScript, React,
 | Landing | Left Aligned Service | Right Aligned Service |
 |----------|----------|------|
 | ![](docs/assets/services-home.png) | ![](docs/assets/services-left.png) | ![](docs/assets/services-right.png) |
-#### Services
+#### About
 | Values | Team |
 |----------|----------|
 | ![](docs/assets/about-values.png) | ![](docs/assets/about-team.png) |
