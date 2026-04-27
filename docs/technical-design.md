@@ -29,6 +29,7 @@ lang: en
 - [Technology Stack](#technology-stack)
 - [Dependencies](#dependencies)
 - [Project Structure](#project-structure)
+
 ---
 
 ## Introduction
