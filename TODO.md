@@ -52,8 +52,8 @@ Finished: 20/03/2026
 - [x] Responsive design fixes
 - [x] Scrollbar bug fix
 - [x] Bulgarian documentation (?)
-- [ ] Promotional Video
+- [x] Promotional Video
 
 Started: 06/04/2026
 
-Finished: -/04/2026
+Finished: 10/05/2026

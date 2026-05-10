@@ -5,6 +5,7 @@ import { Footer } from '@/components/Footer'
 import { HeroSection } from '@/components/HeroSection'
 import { Section } from '@/components/Section'
 import { MediaCard } from '@/components/MediaCard'
+import { VideoEmbed } from '@/components/VideoEmbed'
 import Consultation from '@/assets/consultation.png?w=400;800;1200&format=avif;webp;jpg&as=picture'
 import Audit from '@/assets/audit.png?w=400;800;1200&format=avif;webp;jpg&as=picture'
 import Development from '@/assets/development.png?w=400;800;1200&format=avif;webp;jpg&as=picture'
@@ -28,6 +29,15 @@ export default function Services() {
         title={t('services.title')}
         description={t('services.description')}
       />
+
+      <div className = "py-32 px-12 md:px-18 lg:px-26 border-t border-border">
+        <div className = "mx-auto w-[50%]">
+          <VideoEmbed
+            videoId = "DEQZqUq7Z-Y"
+            title={t('services.video.title')}
+          />
+        </div>
+      </div>
 
       <Section
         id="consultation"
@@ -74,7 +84,7 @@ export default function Services() {
           image={{ picture: Development, alt: t('services.development.card.alt') }}
         />
       </Section>
-
+      
       <Footer />
     </div>
   )
