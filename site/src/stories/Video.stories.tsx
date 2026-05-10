@@ -3,7 +3,7 @@ import { VideoEmbed } from '../components/VideoEmbed'
 import '../index.css'
 
 const meta: Meta<typeof VideoEmbed> = {
-  title: 'YoutubeEmbed',
+  title: 'VideoEmbed',
   component: VideoEmbed,
   argTypes: {
     videoId: { control: 'text' },

@@ -30,10 +30,10 @@ export default function Services() {
         description={t('services.description')}
       />
 
-      <div className = "py-32 px-12 md:px-18 lg:px-26 border-t border-border">
-        <div className = "mx-auto w-[50%]">
+      <div className="py-32 px-4 sm:px-8 md:px-18 lg:px-26 border-t border-border">
+        <div className="mx-auto w-full sm:w-[85%] md:w-[70%] lg:w-[50%]">
           <VideoEmbed
-            videoId = "DEQZqUq7Z-Y"
+            videoId="DEQZqUq7Z-Y"
             title={t('services.video.title')}
           />
         </div>
