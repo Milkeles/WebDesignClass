@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Visual Style Guide
-permalink: /docs/technical-design/
+permalink: /docs/visual-style-guide/
 id: fw-vsg-01032026
 lang: en
 ---
